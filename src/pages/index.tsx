@@ -13,6 +13,18 @@ export default function Home() {
       <Head>
         <title>Plamev</title>
         <meta name="description" content="plamev" />
+        <meta
+          name="description"
+          content="Viva mais tempo ao lado do seu melhor amigo. Com o plano de saúde, você protege seu pet o ano todo, sem passar aperto na hora de uma emergência."
+        />
+        <meta property="og:title" content="Plamev" />
+        <meta
+          property="og:description"
+          content="
+          Viva mais tempo ao lado do seu melhor amigo. Com o plano de saúde, você protege seu pet o ano todo, sem passar aperto na hora de uma emergência."
+        />
+        <meta property="og:url" content="https://plamev-private.vercel.app/" />
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
