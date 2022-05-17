@@ -1,4 +1,5 @@
-import Document, { Head, Html, Main, NextScript } from "next/Document";
+import Document, { Html, Main, NextScript } from "next/Document";
+import Head from "next/Head";
 import Script from "next/script";
 
 export default class MyDocument extends Document {
@@ -13,6 +14,11 @@ export default class MyDocument extends Document {
           />
         </Head>
         <body>
+          <Script
+            type="text/javascript"
+            async
+            src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/e9fc4309-eb82-483d-8522-05ba3d0d6fd0-loader.js"
+          />
           <Main />
           <NextScript />
         </body>
