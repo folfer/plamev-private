@@ -226,6 +226,8 @@
   top: 0px;
   right: 0px;
 
+  z-index: 999;
+
   background-color: var(--blue-200);
 
   @media (min-width: 1200px) {
