@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { BsPlayFill } from "react-icons/bs";
-import { IDoubtsVideoLayoutProps } from "../../data";
 import stars from "../../../../../public/stars.png";
 import styles from "./styles.module.scss";
 import { useEffect, useState } from "react";
