@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { IPlanLayoutProps } from "../../data";
 import styles from "./styles.module.scss";
 import Logo from "../../../../../public/advance.png";
 import { AiOutlineCheck } from "react-icons/ai";
@@ -12,7 +11,7 @@ export const PlanDetail = ({
   finalValue,
   planType,
   LogoProps,
-}: IPlanLayoutProps) => {
+}: any) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
