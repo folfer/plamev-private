@@ -1,0 +1,284 @@
+.firstContainer {
+  width: 100%;
+  height: 100%;
+
+  margin: 42px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 330px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 36px;
+}
+
+.mapContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.summaryContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.reimbursementContainer {
+  width: initial;
+}
+
+.summaryReimbursement {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  font-size: .5rem;
+  font-weight: 700;
+  line-height: .75rem;
+
+  color: var(--grey-100);
+}
+
+.reimbursementColorBox {
+  width: 17px;
+  height: 16px;
+
+  background: var(--orange-100);
+}
+
+.accreditedContainer {
+  width: initial;
+}
+
+.summaryAccredited {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  font-size: .5rem;
+  font-weight: 700;
+  line-height: .75rem;
+
+  color: var(--grey-100);
+}
+
+.accreditedColorBox {
+  width: 17px;
+  height: 16px;
+
+  background: var(--blue-400);
+}
+
+.heroImage {
+  width: 309px;
+  height: 316px;
+}
+
+.textContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  color: var(--grey-100);
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+
+  text-align: center;
+}
+
+.paragraphContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.paragraph {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.buttonContainer {
+  width: 100%;
+  max-width: 303px;
+  height: 60px;
+
+  padding: 0 30px;
+  border-radius: 50px;
+
+  margin-top: 31px;
+
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+
+  font-size: .8rem;
+
+  color: var(--white-200);
+  background: var(--orange-100);
+}
+
+@media (min-width: 420px) {
+  .summaryReimbursement {
+    font-size: 0.85rem;
+  }
+
+  .summaryAccredited {
+    font-size: 0.85rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .paragraph {
+    font-size: 1.3rem;
+  }
+
+  .buttonContainer {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .firstContainer {
+    margin: 112px 0;
+  }
+
+  .contentContainer {
+    max-width: 1344px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+
+    padding: 0 30px;
+  }
+
+  .mapContainer {
+    flex-direction: row;
+  }
+
+  .summaryContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+
+    position: absolute;
+
+    margin-top: 320px;
+    margin-right: 350px;
+    margin-left: 20px;
+  }
+
+  .summaryReimbursement {
+    font-size: .9rem;
+  }
+
+  .reimbursementColorBox {
+    width: 38px;
+    height: 34px;
+  }
+
+  .summaryAccredited {
+    font-size: .9rem;
+  }
+
+  .accreditedColorBox {
+    width: 38px;
+    height: 34px;
+  }
+
+  .heroImage {
+    width: 100%;
+    max-width: 648.6px;
+    height: 665px;
+  }
+
+  .textContainer {
+    gap: 24px;
+
+    margin-left: 125px;
+
+    button:hover {
+      background: var(--orange-200);
+    }
+  }
+
+  .title {
+    font-size: 2rem;
+    text-align: start;
+  }
+
+  .paragraph {
+    max-width: 360px;
+    font-size: 1.25rem;
+    line-height: 1.87rem;
+  }
+
+  .buttonContainer {
+    max-width: 338px;
+    height: 50px;
+
+    margin: 0;
+
+    font-size: 1.25rem;
+
+    transition: .2s;
+  }
+}
+
+@media (min-width: 1290px) {
+  .summaryContainer {
+    margin-top: 360px;
+    margin-right: 400px;
+    margin-left: 20px;
+  }
+
+  .reimbursementColorBox {
+    width: 43px;
+    height: 39px;
+  }
+
+  .summaryAccredited {
+    font-size: 1rem;
+  }
+
+  .summaryReimbursement {
+    font-size: 1rem;
+  }
+
+  .summaryAccredited {
+    font-size: 1rem;
+  }
+
+  .accreditedColorBox {
+    width: 43px;
+    height: 39px;
+  }
+}

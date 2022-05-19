@@ -1,0 +1,35 @@
+.questionBoxContainer {
+  width: 100%;
+  height: auto;
+
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-radius: 10px;  
+
+  font-size: 14px;
+
+  background-color: var(--white-100);
+
+  @media (min-width: 768px) {
+    border-radius: 5px;  
+    padding: 10px;
+  }
+
+  @media (min-width: 1080px) {
+    width: 50%;
+  }
+  @media (min-width: 1580px) {
+    width: 40%;
+  }
+}
+
+.questionText {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--grey-100);
+}

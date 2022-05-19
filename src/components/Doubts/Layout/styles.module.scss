@@ -1,0 +1,107 @@
+.firstContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  
+  padding: 10px;
+  gap: 15px;
+}
+
+.sliderContainerSwap {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: var(--grey-100);
+  margin-top: 40px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media (min-width: 1268px) {
+    font-size: 22px;
+  }
+}
+
+.description {
+  font-weight: 300;
+  font-size: 12px;
+  text-align: center;
+
+  color: var(--grey-100);
+
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
+  @media (min-width: 1268px) {
+    font-size: 18px;
+  }
+}
+
+.buttonProtectMyPet {
+  width: 320px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+
+  background: var(--orange-100);
+  color: var(--white-200);
+}
+
+.wrappedButton {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+
+
+
+.sliderFather {
+  :global(.swiper-button-next) {
+    top: 50%;
+    right: 3%;
+    background: rgba(0, 119, 181, 0.22);
+    border-radius: 100%;
+    width: 33px;
+    height: 33px;
+  }
+  :global(.swiper-button-prev) {
+    top: 50%;
+    left: 3%;
+    background: rgba(0, 119, 181, 0.22);
+    border-radius: 100%;
+    width: 33px;
+    height: 33px;
+  }
+  :global(.swiper-button-next::after){
+    font-size: 10px;
+    color: var(--white-200);
+  }
+  :global(.swiper-button-prev::after){
+    font-size: 10px;
+    color: var(--white-200);
+  }
+}
+
+
+

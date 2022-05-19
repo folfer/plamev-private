@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   outline: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -12,13 +12,21 @@
 
   --grey-100: #505458;
   --grey-200: #26313C;
+  --grey-300: #504F4B;
 
   --blue-100: #2B76B0;
   --blue-200: #036CC2;
   --blue-300: #1378B3;
+  --blue-400: #2581c4;
+  --blue-500: #209AE5;
+  --blue-600: #056FB5;
+  --blue-700: #3BBEEF;
 
   --orange-100: #ED8C24;
   --orange-200: #e28521;
+
+  --green-100: #79CC43;
+  --red-100: #D90606;
 }
 
 html {
@@ -29,6 +37,7 @@ html {
   @media (min-width: 720px) {
     font-size: 87.5%;
   }
+
   @media (min-width: 420px) {
     font-size: 77.5%;
   }
@@ -37,6 +46,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
 }
+
 body,
 input,
 textarea,
@@ -69,6 +79,7 @@ button {
   cursor: pointer;
   background: none;
 }
+
 a {
   text-decoration: none;
   cursor: pointer;
@@ -78,10 +89,12 @@ a {
   width: 10px;
   height: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #8884;
   border-radius: 20px;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #3333;
   border-radius: 20px;

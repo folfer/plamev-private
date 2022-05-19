@@ -7,7 +7,6 @@ import contractImg from "../../../../public/contract.svg"
 
 
 import Image from "next/image"
-import { setMaxListeners } from "events";
 
 export const Contraction = ({
   toggleMenu,

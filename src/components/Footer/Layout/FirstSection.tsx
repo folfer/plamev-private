@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import styles from "../Layout/styles.module.scss";
 import Logo from "../../../../public/logo-blue.svg";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { IFirstSectionLayoutProps } from "../data";
 import Link from "next/link";
 
@@ -32,7 +32,11 @@ export const FirstSection = ({
         >
           <strong>Atendimento</strong>
           <div className={styles.IconArrow}>
-            <MdKeyboardArrowDown color="#504F4B" size={25} />
+            {!toggleAttendance ? (
+              <MdKeyboardArrowDown color="#504F4B" size={25} />
+            ) : (
+              <MdKeyboardArrowUp color="#504F4B" size={25} />
+            )}
           </div>
           <div className={styles.visibleOnDesktop}>
             <Link href="/">Central de atendimento</Link>
@@ -52,7 +56,11 @@ export const FirstSection = ({
         >
           <strong>Políticas</strong>
           <div className={styles.IconArrow}>
-            <MdKeyboardArrowDown color="#504F4B" size={25} />
+            {!togglePolicies ? (
+              <MdKeyboardArrowDown color="#504F4B" size={25} />
+            ) : (
+              <MdKeyboardArrowUp color="#504F4B" size={25} />
+            )}
           </div>
           <div className={styles.visibleOnDesktop}>
             <Link href="/">Aviso de privacidade</Link>
@@ -71,7 +79,11 @@ export const FirstSection = ({
         >
           <strong>Institucional</strong>
           <div className={styles.IconArrow}>
-            <MdKeyboardArrowDown color="#504F4B" size={25} />
+            {!toggleInstitutional ? (
+              <MdKeyboardArrowDown color="#504F4B" size={25} />
+            ) : (
+              <MdKeyboardArrowUp color="#504F4B" size={25} />
+            )}
           </div>
           <div className={styles.visibleOnDesktop}>
             <Link href="/">A Plamev Pet</Link>

@@ -1,0 +1,88 @@
+.firstContainer {
+  width: 70%;
+  height: 300px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.insideFirstContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.buttonPlay {
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.58);
+
+  border-radius: 50px;
+}
+
+.wrappedButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrappedInformations {
+  width: 60%;
+  position: absolute;
+  top: 80%;
+  left: 44%;
+
+  padding: 8px;
+  transform: translate(-50%, -50%);
+
+  background: var(--white-200);
+  border-radius: 5px;
+}
+
+.starsContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.insideInformations {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue-600);
+}
+
+.description {
+  font-weight: 400;
+  font-size: 10px;
+
+  color: var(--grey-100);
+}
+
+.finalDescription {
+  font-weight: 700;
+  font-size: 10px;
+  color: var(--grey-100);
+}

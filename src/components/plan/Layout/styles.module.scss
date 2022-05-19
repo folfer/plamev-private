@@ -1,0 +1,433 @@
+.firstContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 73.85%);
+}
+
+.contentContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 19px;
+
+  padding: 24px 0 42px;
+}
+
+.planContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-align: center;
+
+  color: var(--grey-300);
+}
+
+.planContent {
+  width: 320px;
+  height: 430px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 24px 34px 17px;
+
+  border-radius: 5px;
+
+  background: var(--white-200);
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+
+  button:hover {
+    background: var(--orange-200);
+  }
+}
+
+.platinumContainer {
+  width: 320px;
+  height: 430px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 24px 34px 17px;
+
+  border-radius: 5px;
+
+  background: linear-gradient(26.59deg,
+      rgba(198, 212, 225, 0.97) 35.81%,
+      rgba(173, 199, 226, 0.66) 55.72%,
+      rgba(198, 208, 219, 0.48) 69.86%,
+      rgba(210, 220, 230, 0.42) 81.8%);
+
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.25));
+
+  button:hover {
+    background: var(--orange-200);
+  }
+}
+
+.logoContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.slimImg {
+  width: 59px;
+  height: 38px;
+}
+
+.advanceImg {
+  width: 43.48px;
+  height: 46px;
+}
+
+.platinumImg {
+  width: 32px;
+  height: 46px;
+}
+
+.planTitle {
+  font-size: 1.8rem;
+  line-height: 28px;
+
+  color: var(--blue-600);
+}
+
+.discountContainer {
+  width: 151px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 8px 0 7px;
+  border-radius: 5px;
+
+  background: var(--green-100);
+}
+
+.titleDiscount {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: var(--white-200);
+}
+
+.descriptionDiscount {
+  font-size: .68rem;
+  font-weight: 300;
+  line-height: 11px;
+
+  color: var(--white-200);
+}
+
+.planValue {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.initialValue {
+  font-size: .81rem;
+  font-weight: 400;
+  line-height: 19.5px;
+
+  color: var(--blue-100);
+}
+
+.finalValue {
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 46px;
+  color: var(--blue-100);
+}
+
+.description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  margin: 20px 0;
+}
+
+.accession {
+  font-size: .81rem;
+  font-weight: 400;
+
+  color: var(--grey-300);
+}
+
+.coverage {
+  font-size: .81rem;
+  font-weight: 400;
+
+  text-align: center;
+
+  color: var(--grey-300);
+}
+
+.bonus {
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: var(--blue-500);
+}
+
+.buttonsContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.link {
+  width: 100px;
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: .81rem;
+  font-weight: 600;
+
+  text-decoration: underline;
+
+  color: var(--blue-500);
+}
+
+.button {
+  width: 100%;
+  max-width: 182px;
+  height: 40px;
+
+  border-radius: 50px;
+
+  font-size: .8rem;
+  font-weight: 700;
+
+  color: var(--white-200);
+  background: var(--orange-100);
+}
+
+.assessment {
+  position: absolute;
+  right: 18.5px;
+  top: 12px;
+}
+
+.crown {
+  position: absolute;
+  right: 27px;
+  top: 37px;
+}
+
+@media (min-width: 420px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .planTitle {
+    font-size: 2.5rem;
+  }
+
+  .titleDiscount {
+    font-size: 1.25rem;
+  }
+
+  .descriptionDiscount {
+    font-size: .85rem;
+  }
+
+  .initialValue {
+    font-size: 1.2rem;
+  }
+
+  .finalValue {
+    font-size: 4rem;
+  }
+
+  .accession {
+    font-size: 1.05rem;
+  }
+
+  .coverage {
+    font-size: 1.05rem;
+  }
+
+  .bonus {
+    font-size: 1.3rem;
+  }
+
+  .link {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1080px) {
+  .firstContainer {
+    justify-content: flex-end;
+  }
+
+  .contentContainer {
+    padding: 46px 0 0;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 54px;
+
+    br {
+      display: none;
+    }
+  }
+
+  .planContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .platinumContainer {
+    width: 385px;
+    height: 568px;
+
+    padding: 35px 20px 45px;
+  }
+
+  .planContent {
+    width: 385px;
+    height: 568px;
+
+    padding: 35px 20px 45px;
+  }
+
+  .logoContainer {
+    gap: 12px;
+  }
+
+  .slimImg {
+    width: 80px;
+    height: 59px;
+  }
+
+  .advanceImg {
+    width: 58.6px;
+    height: 62px;
+  }
+
+  .platinumImg {
+    width: 38.7px;
+    height: 55px;
+  }
+
+  .planTitle {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .discountContainer {
+    width: 201px;
+    height: 41px;
+
+    margin: 24px 0;
+  }
+
+  .titleDiscount {
+    font-size: 16px;
+  }
+
+  .descriptionDiscount {
+    font-size: 11px;
+  }
+
+  .initialValue {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .finalValue {
+    font-size: 48px;
+    line-height: 60px;
+  }
+
+  .description {
+    margin: 0;
+    gap: 0;
+  }
+
+  .accession {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .coverage {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .bonus {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .buttonsContainer {
+    margin-top: 33px;
+    gap: 12px;
+  }
+
+  .link {
+    width: 100%;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .button {
+    max-width: 270px;
+    height: 55px;
+
+    font-size: 18px;
+
+    transition: .2s;
+  }
+}

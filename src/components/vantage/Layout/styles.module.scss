@@ -1,0 +1,474 @@
+.firstContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 112px;
+}
+
+.contentContainer {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 16px;
+
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+  }
+  @media (min-width: 1268px) {
+    flex-direction: row;
+  }
+}
+
+.titleContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 10px;
+}
+
+.swiperContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowColumn {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 15px;
+  
+  margin-bottom: 15px;
+}
+
+.title {
+  width: 100%;
+  max-width: 325px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+
+  text-align: center;
+
+  color: var(--grey-300);
+}
+
+.benefitsContainer {
+  // width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+
+  margin-left: 15px;
+  margin-bottom: 15px;
+
+}
+
+.container {
+  width: 302px;
+  height: 320px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  border-radius: 5px;
+
+  background: var(--white-200);
+
+  margin-top: 15px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 0 21px;
+}
+
+.petsImg {
+  width: 113.3px;
+  height: 120.9px;
+
+  margin: 52px 0 16px;
+}
+
+.indicationImg {
+  width: 111.8px;
+  height: 80px;
+
+  margin: 50px 0 39px;
+}
+
+.showerImg {
+  width: 106.1px;
+  height: 123.5px;
+
+  margin: 43px 0 12.4px;
+}
+
+.reimbursementImg {
+  width: 82.2px;
+  height: 109.5px;
+
+  margin: 50px 0 21.4px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  text-align: center;
+
+  color: var(--blue-100);
+}
+
+.benefitsTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.paragraph {
+  font-size: .93rem;
+  font-weight: 300;
+  line-height: 22.5px;
+}
+
+.petsDescription {
+  width: 302px;
+  height: 320px;
+
+  position: absolute;
+
+  opacity: 1;
+
+  padding: 25px 18px 0;
+
+  border-radius: 5px;
+  background-color: var(--blue-200);
+}
+
+.indicationDescription {
+  width: 302px;
+  height: 320px;
+
+  position: absolute;
+
+  opacity: 0;
+
+  padding: 25px 18px 0;
+
+  border-radius: 5px;
+  background-color: var(--blue-200);
+}
+
+.showerDescription {
+  width: 302px;
+  height: 320px;
+
+  position: absolute;
+
+  opacity: 0;
+
+  padding: 25px 18px 0;
+
+  border-radius: 5px;
+  background-color: var(--blue-200);
+}
+
+.reimburseDescription {
+  width: 302px;
+  height: 320px;
+
+  position: absolute;
+
+  opacity: 0;
+
+  padding: 25px 18px 0;
+
+  border-radius: 5px;
+  background-color: var(--blue-200);
+}
+
+.descriptionContainer {
+  width: 100%;
+  height: 270px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.descriptionParagraph {
+  width: 240px;
+  font-size: .93rem;
+  font-weight: 400;
+  line-height: 25px;
+
+  color: var(--white-200);
+}
+
+.button {
+  width: 100%;
+  height: 50px;
+
+  border-radius: 50px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  color: var(--white-100);
+  background: var(--orange-100);
+}
+
+@media (min-width: 420px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .benefitsTitle {
+    font-size: 1.4rem;
+  }
+
+  .paragraph {
+    font-size: 1.23rem;
+  }
+
+  .descriptionParagraph {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .button {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1420px) {
+
+  .firstContainer {
+    justify-content: center;
+  }
+
+  .contentContainer {
+    gap: 42px;
+  }
+
+  .title {
+    max-width: none;
+
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .benefitsContainer {
+    flex-direction: row;
+
+    margin: 0;
+  }
+
+  .container {
+    width: 348px;
+    height: 494px;
+
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 0 19px;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .benefitsTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 30px;
+
+    text-align: center;
+
+    color: var(--blue-100);
+  }
+
+  .paragraph {
+    font-size: 1.12rem;
+    font-weight: 300;
+    line-height: 27px;
+
+    text-align: center;
+
+    color: var(--blue-100)
+  }
+
+  .petsImg {
+    width: 135.9px;
+    height: 145px;
+
+    margin: 93px 0 42px;
+  }
+
+  .indicationImg {
+    width: 144px;
+    height: 104.5px;
+
+    margin: 97px 0 78.5px;
+  }
+
+  .showerImg {
+    width: 119px;
+    height: 138.5px;
+
+    margin: 88px 0 53.4px;
+  }
+
+  .reimbursementImg {
+    width: 108.4px;
+    height: 144.6px;
+
+    margin: 84px 0 51.4px;
+  }
+
+  .petsDescription {
+    width: 348px;
+    height: 494px;
+
+    opacity: 0;
+
+    position: absolute;
+
+    padding: 62px 27px 0;
+
+    border-radius: 5px;
+    background-color: var(--blue-200);
+  }
+
+  .indicationDescription {
+    width: 348px;
+    height: 494px;
+
+    opacity: 0;
+
+    position: absolute;
+
+    padding: 62px 27px 0;
+
+    border-radius: 5px;
+    background-color: var(--blue-200);
+  }
+
+  .showerDescription {
+    width: 348px;
+    height: 494px;
+
+    opacity: 0;
+
+    position: absolute;
+
+    padding: 62px 27px 0;
+
+    border-radius: 5px;
+    background-color: var(--blue-200);
+  }
+
+  .reimburseDescription {
+    width: 348px;
+    height: 494px;
+
+    opacity: 0;
+
+    position: absolute;
+
+    padding: 62px 27px 0;
+
+    border-radius: 5px;
+    background-color: var(--blue-200);
+  }
+
+  .descriptionContainer {
+    width: 100%;
+    height: 304px;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    button:hover {
+      background: var(--orange-200);
+    }
+  }
+
+  .descriptionParagraph {
+    width: 276px;
+    font-size: 1.12rem;
+    font-weight: 400;
+    line-height: 27px;
+
+    color: var(--white-200);
+  }
+
+  .button {
+    width: 100%;
+    height: 63px;
+
+    border-radius: 50px;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    color: var(--white-100);
+    background: var(--orange-100);
+
+    transition: .2s;
+  }
+
+  .petsDescription:hover {
+    opacity: 1;
+  }
+
+  .indicationDescription:hover {
+    opacity: 1;
+  }
+
+  .showerDescription:hover {
+    opacity: 1;
+  }
+
+  .reimburseDescription:hover {
+    opacity: 1;
+  }
+}

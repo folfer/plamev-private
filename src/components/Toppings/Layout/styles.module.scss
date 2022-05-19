@@ -1,0 +1,198 @@
+.firstSection {
+  width: 100%;
+  height: 260px;
+
+  padding-top: 20px;
+  padding-bottom: 80px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-image: url('../../../../public/firstBackground.png');
+  background-repeat: no-repeat;
+  background-size: 120%;
+  background-position: center;
+
+  @media (min-width: 768px) {
+    height: 460px;
+
+    background-size: 100%;
+  }
+
+  @media (min-width: 1268px) {
+    height: 900px;
+
+    background-size: 100%;
+  }
+
+  @media (min-width: 1268px) {
+    height: 900px;
+
+    background-size: 100%;
+  }
+
+
+}
+
+.wrappedContainers {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.firstContainer {
+  width: 55%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  gap: 12px;
+
+  @media (min-width: 768px) {
+    width: 45%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.wrappedSecondContainer {
+  width: 45%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    width: 45%;
+  }
+}
+
+.secondContainer {
+  width: 80%;
+  height: 85px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #EEEEEE;
+
+  gap: 12px;
+
+  @media (min-width: 768px) {
+    width: 80%;
+    height: 155px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 80%;
+    height: 255px;
+  }
+
+  @media (min-width: 1300px) {
+    width: 80%;
+    height: 355px;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--white-100);
+
+  @media (min-width: 768px) {
+    font-size: 14px;
+  }
+  @media (min-width: 1268px) {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}
+
+.buttonWantProtect {
+  height: 28px;
+
+  padding: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+  background-color: var(--orange-100);
+  color: var(--white-100);
+  font-weight: 700;
+  font-size: 10px;
+
+  @media (min-width: 1268px) {
+    font-size: 14px;
+    padding: 20px 65px 20px 65px;
+    align-self: flex-start;
+  }
+}
+
+.buttonPlay {
+  width: 27px;
+  height: 27px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.43);
+
+  @media (min-width: 768px) {
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (min-width: 1268px) {
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.plan {
+  width: 100%;
+  height: auto;
+
+  position: relative;
+  top: -55px;
+
+  @media (min-width: 768px) {
+    top: -80px;
+  }
+
+  @media (min-width: 1080px) {
+    top: -120px;
+  }
+  
+  @media (min-width: 1300px) {
+    top: -180px;
+  }
+}
+
+.insidePlans {
+  width: 100%;
+  height: auto;
+
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
