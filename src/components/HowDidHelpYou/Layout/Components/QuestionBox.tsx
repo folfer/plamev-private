@@ -1,8 +1,7 @@
 import { BsFillCaretDownFill } from "react-icons/bs";
-import { IQuestionBoxLayoutProps } from "../../data";
 import styles from "./styles.module.scss";
 
-export const QuestionBox = ({ textDescription }: IQuestionBoxLayoutProps) => {
+export const QuestionBox = ({ textDescription }: any) => {
   return (
     <section className={styles.questionBoxContainer}>
       <p className={styles.questionText}>{textDescription}</p>

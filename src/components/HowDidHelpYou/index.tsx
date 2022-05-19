@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
-import { IHowDidHelpYou } from "./data";
 
 import { HowDidHelpYou as Layout } from "./Layout";
 
-export const HowDidHelpYou = (props: IHowDidHelpYou) => {
+export const HowDidHelpYou = (props: any) => {
   const layoutProps = {
     ...props,
   };
