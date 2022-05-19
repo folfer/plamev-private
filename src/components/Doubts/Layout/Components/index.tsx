@@ -5,7 +5,7 @@ import stars from "../../../../../public/stars.png";
 import styles from "./styles.module.scss";
 import { useEffect, useState } from "react";
 
-export const DoubtsVideo = ({ ImageSrc }: IDoubtsVideoLayoutProps) => {
+export const DoubtsVideo = ({ ImageSrc }: any) => {
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
