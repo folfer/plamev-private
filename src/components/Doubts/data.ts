@@ -4,7 +4,7 @@ export interface IDoubts {
 }
 
 export interface IDoubtsLayout extends IDoubts {
-
+  x: string;
 }
 
 export interface IDoubtsLayoutProps
