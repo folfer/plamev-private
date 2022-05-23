@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { IPlanLayoutProps } from "../../data";
 import styles from "./styles.module.scss";
 import Logo from "../../../../../public/advance.png";
+import sellerImg from "../../../../../public/seller.svg";
 import { AiOutlineCheck } from "react-icons/ai";
 import { MdClose } from "react-icons/md";
 import { useEffect, useState } from "react";
@@ -11,7 +13,8 @@ export const PlanDetail = ({
   finalValue,
   planType,
   LogoProps,
-}: any) => {
+  mostSeller,
+}: IPlanLayoutProps) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
@@ -40,12 +43,31 @@ export const PlanDetail = ({
           <div className={styles.wrappedHeader}>
             <div className={styles.header}>
               {planType === "Slim" ? (
-                <Image width={32} height={23} src={LogoProps} alt="plamev" />
+                <div className={styles.imageIconSlim}>
+                  <Image
+                    src={LogoProps}
+                    alt="plamev"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
               ) : (
-                <Image width={22} height={23} src={LogoProps} alt="plamev" />
+                <div className={styles.imageIcon}>
+                  <Image
+                    src={LogoProps}
+                    alt="plamev"
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
               )}
-
               <h3 className={styles.headerText}>{planType}</h3>
+              {mostSeller && (
+                <div className={styles.headerSellerImg}>
+                  {" "}
+                  <Image src={sellerImg} />{" "}
+                </div>
+              )}
             </div>
           </div>
 

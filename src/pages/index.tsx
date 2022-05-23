@@ -1,14 +1,14 @@
 import Head from "next/head";
-import { Application } from "../components/application";
-import { Clinic } from "../components/clinic";
+import { Application } from "../components/Application";
+import { Clinic } from "../components/Clinic";
 import { Contraction } from "../components/Contraction";
 import { Doubts } from "../components/Doubts";
 import { Footer } from "../components/Footer";
 import { Header } from "../components/Header";
 import { HowDidHelpYou } from "../components/HowDidHelpYou";
 import { Information } from "../components/Information";
-import { Plan } from "../components/plan";
-import { Vantage } from "../components/vantage";
+import { Plan } from "../components/Plan";
+import { Vantage } from "../components/Vantage";
 import { Toppings } from "../components/Toppings";
 
 import styles from "./styles.module.scss";
@@ -24,10 +24,9 @@ export default function Home() {
 
         <meta name="description" content="plamev" />
 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="icon" href="/favicon.ico" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;900&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -39,8 +38,8 @@ export default function Home() {
         <Application />
         <Clinic />
         <Vantage />
-        <Plan />
         <Doubts />
+        <Plan />
         <HowDidHelpYou />
       </div>
 

@@ -1,15 +1,10 @@
 import { useState } from "react";
-import { IContraction } from "./data";
 
 import { Contraction as Layout } from "./Layout";
 
-export const Contraction = (props: IContraction) => {
-  const [toggleMenu, setToggleMenu] = useState<boolean>(false);
-
+export const Contraction = () => {
   const layoutProps = {
-    ...props,
-    toggleMenu,
-    setToggleMenu
+    // ...props,
   };
 
   return <Layout {...layoutProps} />;

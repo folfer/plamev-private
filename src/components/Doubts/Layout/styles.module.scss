@@ -1,3 +1,28 @@
+.initialContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  
+  padding: 10px;
+  gap: 15px;
+
+  :global(.swiper) {
+    width: 100% !important;
+
+    @media (min-width: 768px) {
+      width: 100% !important;
+    }
+    @media (min-width: 1468px) {
+      width: 100% !important;
+    }
+    @media (min-width: 1568px) {
+      width: 80% !important;
+    }
+  }
+}
+
 .firstContainer {
   width: 100%;
 
@@ -77,10 +102,23 @@
 
 
 .sliderFather {
+  :global(.swiper-slide) {
+    width: 100% !important;
+
+    @media (min-width: 968px) {
+      width: 50% !important;
+    }
+    @media (min-width: 1280px) {
+      width: 33% !important;
+    }
+    @media (min-width: 1380px) {
+      width: 33% !important;
+    }
+  }
   :global(.swiper-button-next) {
     top: 50%;
     right: 3%;
-    background: rgba(0, 119, 181, 0.22);
+    background: var(--blue-100);
     border-radius: 100%;
     width: 33px;
     height: 33px;
@@ -88,7 +126,7 @@
   :global(.swiper-button-prev) {
     top: 50%;
     left: 3%;
-    background: rgba(0, 119, 181, 0.22);
+    background: var(--blue-100);
     border-radius: 100%;
     width: 33px;
     height: 33px;

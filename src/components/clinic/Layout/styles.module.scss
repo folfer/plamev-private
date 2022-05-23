@@ -96,7 +96,7 @@
 
 .textContainer {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 6px;
@@ -191,27 +191,27 @@
 
     position: absolute;
 
-    margin-top: 320px;
-    margin-right: 350px;
+    margin-top: 17%;
+    margin-right: 30%;
     margin-left: 20px;
   }
 
   .summaryReimbursement {
-    font-size: .9rem;
+    font-size: 1rem;
   }
 
   .reimbursementColorBox {
-    width: 38px;
-    height: 34px;
+    width: 43px;
+    height: 39px;
   }
 
   .summaryAccredited {
-    font-size: .9rem;
+    font-size: 1rem;
   }
 
   .accreditedColorBox {
-    width: 38px;
-    height: 34px;
+    width: 43px;
+    height: 39px;
   }
 
   .heroImage {
@@ -224,6 +224,8 @@
     gap: 24px;
 
     margin-left: 125px;
+
+    align-items: flex-start;
 
     button:hover {
       background: var(--orange-200);
@@ -253,32 +255,15 @@
   }
 }
 
-@media (min-width: 1290px) {
+@media (min-width: 1220px) {
   .summaryContainer {
-    margin-top: 360px;
-    margin-right: 400px;
-    margin-left: 20px;
+    margin-top: 25%;
   }
+}
 
-  .reimbursementColorBox {
-    width: 43px;
-    height: 39px;
-  }
-
-  .summaryAccredited {
-    font-size: 1rem;
-  }
-
-  .summaryReimbursement {
-    font-size: 1rem;
-  }
-
-  .summaryAccredited {
-    font-size: 1rem;
-  }
-
-  .accreditedColorBox {
-    width: 43px;
-    height: 39px;
+@media (min-width: 1600px) {
+  .summaryContainer {
+    margin-top: 23%;
+    margin-right: 27%;
   }
 }

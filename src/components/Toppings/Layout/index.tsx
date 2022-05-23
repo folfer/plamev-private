@@ -42,16 +42,16 @@ export const Toppings = () => {
               </h1>
             ) : (
               <h1 className={styles.title}>
-                Viva mais tempo ao lado do seu melhor amigo. <br />
-                Com o plano de saúde, você protege seu pet o <br />
-                ano todo, sem passar aperto na hora de uma <br /> emergência.
+                Viva mais tempo ao lado do seu melhor amigo. Com o plano de
+                saúde, você protege seu pet o ano todo, sem passar aperto na
+                hora de uma emergência.
               </h1>
             )}
             <button className={styles.buttonWantProtect}>
               Quero proteger meu pet
             </button>
           </div>
-          <div data-aos="zoom-in" className={styles.wrappedSecondContainer}>
+          <div className={styles.wrappedSecondContainer}>
             <div className={styles.secondContainer}>
               {isTablet ? (
                 <button className={styles.buttonPlay}>
@@ -90,6 +90,7 @@ export const Toppings = () => {
             finalValue="157,99"
             planType="Platinum"
             LogoProps={Platinum}
+            mostSeller={true}
             contract={false}
           />
         </div>

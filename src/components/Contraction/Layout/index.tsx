@@ -1,53 +1,43 @@
-import { IContractionLayoutProps } from "../data";
 import styles from "../Layout/styles.module.scss";
 
-import activeImg from "../../../../public/active.svg"
-import checkImg from "../../../../public/check.svg"
-import contractImg from "../../../../public/contract.svg"
+import activeImg from "../../../../public/active.svg";
+import checkImg from "../../../../public/check.svg";
+import contractImg from "../../../../public/contract.svg";
 
+import Image from "next/image";
 
-import Image from "next/image"
-
-export const Contraction = ({
-  toggleMenu,
-}: IContractionLayoutProps) => {
+export const Contraction = () => {
   return (
     <main className={styles.firstContainer}>
       <section className={styles.sectionContainer}>
-        <h1>Contratação em 3 passos</h1>
+        <h1 className={styles.title}>Contratação em 3 passos</h1>
 
-        <div className={styles.hero}>
-          <div>
-            <div className={styles.cardImg}>
-              <span>
-                <Image src={contractImg} />
-              </span>
-            </div>
-            <h2>Contratação online</h2>
-            <p>Contrate o plano em menos de 5 minutos!</p>
+        <div className={styles.contentContainer}>
+          <div className={styles.itemContent}>
+            <span className={styles.image}>
+              <Image src={contractImg} alt="plamev" />
+            </span>
+            <h2 className={styles.itemTitle}>Contratação online</h2>
+            <p className={styles.paragraph}>Contrate o plano em menos de 5 minutos!</p>
           </div>
 
-          <div>
-            <span>
-              <Image src={activeImg} />
+          <div className={styles.itemContent}>
+            <span className={styles.image}>
+              <Image src={activeImg} alt="plamev" />
             </span>
-            <h2>Ative o plano</h2>
-            <p>Cadastre a ID PET no aplicativo Plamev Appet</p>
+            <h2 className={styles.itemTitle}>Ative o plano</h2>
+            <p className={styles.paragraph}>Cadastre a ID PET no aplicativo Plamev Appet</p>
           </div>
 
-          <div>
-            <span>
-              <div>
-                <div>
-                  <Image src={checkImg} />
-                </div>
-              </div>
+          <div className={styles.itemContent}>
+            <span className={styles.image}>
+              <Image src={checkImg} alt="plamev" />
             </span>
-            <h2>Tudo pronto</h2>
-            <p>Cadastre a ID PET no aplicativo Plamev Appet</p>
+            <h2 className={styles.itemTitle}>Tudo pronto</h2>
+            <p className={styles.paragraph}>Seu pet já faz parte da familia Plamev Pet</p>
           </div>
         </div>
-        <button >Contrate aqui em menos de 5 minutos</button>
+        <button className={styles.button}>Contrate aqui em menos de 5 minutos!</button>
       </section>
     </main>
   );

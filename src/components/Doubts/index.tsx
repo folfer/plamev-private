@@ -1,8 +1,8 @@
 import { Doubts as Layout } from "./Layout";
 
-export const Doubts = (props: any) => {
+export const Doubts = () => {
   const layoutProps = {
-    ...props,
+    // ...props,
   };
 
   return <Layout {...layoutProps} />;

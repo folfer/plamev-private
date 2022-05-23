@@ -1,10 +1,11 @@
 import Image from "next/image";
 import { BsPlayFill } from "react-icons/bs";
+import { IDoubtsVideoLayoutProps } from "../../data";
 import stars from "../../../../../public/stars.png";
 import styles from "./styles.module.scss";
 import { useEffect, useState } from "react";
 
-export const DoubtsVideo = ({ ImageSrc }: any) => {
+export const DoubtsVideo = ({ ImageSrc }: IDoubtsVideoLayoutProps) => {
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
@@ -26,9 +27,9 @@ export const DoubtsVideo = ({ ImageSrc }: any) => {
     <main className={styles.firstContainer}>
       <div className={styles.insideFirstContainer}>
         {isTablet ? (
-          <Image src={ImageSrc} width={350} height={250} alt="plamev people" />
+          <Image src={ImageSrc} alt="plamev people" />
         ) : (
-          <Image src={ImageSrc} width={280} height={200} alt="plamev people" />
+          <Image src={ImageSrc} alt="plamev people" />
         )}
 
         <div className={styles.wrappedButton}>

@@ -28,7 +28,7 @@ export const Doubts = () => {
   }, []);
 
   return (
-    <>
+    <div className={styles.initialContainer}>
       <div className={styles.firstContainer}>
         <h1 className={styles.title}>
           Ainda tem dúvidas se o plano de saúde é o melhor para seu pet?
@@ -66,6 +66,6 @@ export const Doubts = () => {
           Também quero proteger meu pet
         </button>
       </div>
-    </>
+    </div>
   );
 };

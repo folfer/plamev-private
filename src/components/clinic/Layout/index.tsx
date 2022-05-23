@@ -1,18 +1,10 @@
 import Image from "next/image";
-import { IClinicLayoutProps } from "../data";
 
 import styles from "../Layout/styles.module.scss";
 
 import mapImg from "../../../../public/map.svg";
 
-export const Clinic = ({
-  toggleAttendance,
-  togglePolicies,
-  toggleInstitutional,
-  setToggleAttendance,
-  setTogglePolicies,
-  setToggleInstitutional,
-}: IClinicLayoutProps) => {
+export const Clinic = () => {
   return (
     <main className={styles.firstContainer}>
       <section className={styles.contentContainer}>

@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
 
-  margin-bottom: 112px;
+  margin-bottom: 70px;
 }
 
 .contentContainer {
@@ -18,14 +18,6 @@
   justify-content: center;
   flex-direction: column;
   gap: 16px;
-
-
-  @media (min-width: 768px) {
-    flex-direction: column;
-  }
-  @media (min-width: 1268px) {
-    flex-direction: row;
-  }
 }
 
 .titleContainer {
@@ -35,7 +27,6 @@
   align-items: center;
   justify-content: center;
 
-  margin-top: 10px;
 }
 
 .swiperContainer {
@@ -54,13 +45,15 @@
   justify-content: center;
 
   gap: 15px;
-  
+
   margin-bottom: 15px;
 }
 
 .title {
   width: 100%;
   max-width: 325px;
+
+  margin-bottom: 16px;
 
   font-size: 1rem;
   font-weight: 700;
@@ -270,18 +263,26 @@
   }
 }
 
-@media (min-width: 1420px) {
+@media (min-width: 768px) {
+  .contentContainer {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1080px) {
 
   .firstContainer {
     justify-content: center;
   }
 
   .contentContainer {
-    gap: 42px;
+    gap: 8px;
   }
 
   .title {
     max-width: none;
+
+    margin-bottom: 42px;
 
     font-size: 2rem;
     font-weight: 700;
@@ -370,7 +371,7 @@
 
     position: absolute;
 
-    padding: 62px 27px 0;
+    padding: 62px 27px;
 
     border-radius: 5px;
     background-color: var(--blue-200);
@@ -384,7 +385,7 @@
 
     position: absolute;
 
-    padding: 62px 27px 0;
+    padding: 62px 27px;
 
     border-radius: 5px;
     background-color: var(--blue-200);
@@ -398,21 +399,21 @@
 
     position: absolute;
 
-    padding: 62px 27px 0;
+    padding: 62px 27px;
 
     border-radius: 5px;
     background-color: var(--blue-200);
   }
 
   .reimburseDescription {
-    width: 348px;
+    width: 348PX;
     height: 494px;
 
     opacity: 0;
 
     position: absolute;
 
-    padding: 62px 27px 0;
+    padding: 62px 27px;
 
     border-radius: 5px;
     background-color: var(--blue-200);
@@ -458,17 +459,51 @@
 
   .petsDescription:hover {
     opacity: 1;
+
+    animation-name: appear;
+    animation-duration: 700ms;
+    animation-fill-mode: backwards;
   }
 
   .indicationDescription:hover {
     opacity: 1;
+
+    animation-name: appear;
+    animation-duration: 700ms;
+    animation-fill-mode: backwards;
   }
 
   .showerDescription:hover {
     opacity: 1;
+
+    animation-name: appear;
+    animation-duration: 700ms;
+    animation-fill-mode: backwards;
   }
 
   .reimburseDescription:hover {
     opacity: 1;
+
+    animation-name: appear;
+    animation-duration: 700ms;
+    animation-fill-mode: backwards;
+
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: 1425px) {
+
+  .contentContainer {
+    flex-direction: row;
   }
 }

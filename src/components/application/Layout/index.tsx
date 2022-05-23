@@ -1,21 +1,21 @@
-import { IApplicationLayoutProps } from "../data";
+import Image from "next/image";
 import styles from "../Layout/styles.module.scss";
 
-export const Application = ({
-  toggleAttendance,
-  togglePolicies,
-  toggleInstitutional,
-  setToggleAttendance,
-  setTogglePolicies,
-  setToggleInstitutional,
-}: IApplicationLayoutProps) => {
+import phoneImg from "../../../../public/smartphone.png"
+import startImg from "../../../../public/start.svg"
+
+export const Application = () => {
   return (
     <main className={styles.firstContainer}>
       <section className={styles.sectionContainer}>
-        <div className={styles.contentContainer}>
-          <div>
-            <h1>No aplicativo Plamev Appet você acessa todos os benefícios do plano do seu amigo a 1 clique:</h1>
-            <ul>
+        <div className={styles.container}>
+          <div className={styles.contentContainer}>
+            <h1 className={styles.title}>
+              No aplicativo Plamev Appet você acessa todos os benefícios do
+              plano do seu amigo a 1 clique:
+            </h1>
+
+            <ul className={styles.list}>
               <li>Agenda Pet</li>
               <li>Rede Crendenciada</li>
               <li>Extrato Financeiro</li>
@@ -24,17 +24,22 @@ export const Application = ({
               <li>Saúde em dia e muito mais...</li>
             </ul>
           </div>
-          <button>Contrate sem burocracia</button>
+
+          <button className={styles.button}>Contrate sem burocracia</button>
         </div>
       </section>
 
-      <div className={styles.phoneImg}>
-        <span>
-        </span>
-        {/* <div>
-          <span className={styles.start}>
-            <img src="/start.svg" />
-          </span>
+
+      <div className={styles.imageContainer}>
+        <div className={styles.phoneImg}>
+          <Image src={phoneImg} />
+        </div>
+        {/* <div className={styles.video}>
+          <div className={styles.playerContainer}>
+            <div className={styles.player}>
+              <Image src={startImg} />
+            </div>
+          </div>
         </div> */}
       </div>
     </main>
