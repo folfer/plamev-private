@@ -37,7 +37,7 @@ export const PlanDetail = ({
     }
   }, []);
   return (
-    <section className={styles.planDetailContainer} data-aos="flip-right">
+    <section className={styles.planDetailContainer}>
       {!contract ? (
         <>
           <div className={styles.wrappedHeader}>
