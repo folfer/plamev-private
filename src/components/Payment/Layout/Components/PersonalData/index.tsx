@@ -143,7 +143,7 @@ export const PersonalData = () => {
               displayEmpty
               renderValue={() => {
                 return (
-                  <em>{addressData ? addressData?.localidade : "Estado"}</em>
+                  <em>{addressData ? addressData?.localidade : "Cidade"}</em>
                 );
               }}
             >
