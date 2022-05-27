@@ -3,7 +3,6 @@ import { BiDotsHorizontalRounded } from "react-icons/bi";
 import styles from "./styles.module.scss";
 
 import { TextField } from "@mui/material";
-import Image from "next/Image";
 
 export const Abstract = () => {
   return (
