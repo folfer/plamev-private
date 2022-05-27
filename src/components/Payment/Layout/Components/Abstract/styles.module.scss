@@ -1,0 +1,351 @@
+.abstractContainer {
+  width: 100%;
+  max-width: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 16px 0 16px;
+
+  background: var(--white-200);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+.headerAbstractContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 0 8px 24px;
+}
+
+.noRecordContainer {
+  width: 100%;
+  max-width: 328px;
+  height: 300px;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.noRecordTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 23px;
+
+  color: var(--grey-300);
+}
+
+.noRecordButton {
+  width: 100%;
+  max-width: 270px;
+  height: 60px;
+
+  border-radius: 50px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: var(--white-200);
+  background-color: var(--orange-100);
+}
+
+.title {
+  width: 100%;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 24px;
+
+  color: var(--grey-300);
+}
+
+.planContainer {
+  width: 100%;
+  max-width: 344px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 6px 8px 6px 10px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.paragraph {
+  width: 100%;
+  max-width: 220px;
+
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: var(--grey-300);
+
+  b {
+    font-weight: 700;
+
+    color: var(--blue-200);
+  }
+}
+
+.menuButton {
+  width: 28px;
+  height: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding-top: 2px;
+}
+
+.discountContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  padding: 16px 8px 26px;
+}
+
+.information {
+  display: none;
+}
+
+.discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paragraphDiscount {
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: var(--grey-500);
+}
+
+.couponContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+
+  border-top: 1px dashed var(--grey-400);
+  border-bottom: 1px dashed var(--grey-400);
+
+  padding: 16px 0;
+}
+
+.inputContainer {
+  width: 100%;
+  max-width: 230px;
+
+  :global(.MuiOutlinedInput-notchedOutline) {
+    border: 1px solid #C4C4C4;
+    border-radius: 30px;
+    padding: 0;
+
+  }
+
+  :global(.MuiInputLabel-root) {
+    font-size: 15px;
+    padding: 0;
+  }
+}
+
+.dataInput {
+  width: 100%;
+}
+
+.buttonDiscount {
+  width: 113px;
+  height: 32px;
+
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 20px;
+
+  border-radius: 30px;
+
+  background: var(--blue-200);
+  color: var(--white-200);
+}
+
+.totalValueContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 8px 26px;
+}
+
+.paragraphTotalValue {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+
+  color: var(--grey-500);
+}
+
+.button {
+  width: 270px;
+  height: 60px;
+
+  border-radius: 50px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: var(--white-100);
+  background: var(--orange-100);
+}
+
+@media (min-width: 1080px) {
+  .abstractContainer {
+    max-width: 472px;
+    min-height: 527px;
+
+    justify-content: center;
+
+  }
+
+  .headerAbstractContainer {
+    padding: 0 23px 35px;
+  }
+
+  .noRecordContainer {
+    width: 100%;
+    max-width: 410px;
+    height: 100%;
+
+    button:hover {
+      background: var(--orange-200);
+    }
+  }
+
+  .noRecordTitle {
+    font-size: 1.65rem;
+    line-height: 27px;
+  }
+
+  .noRecordButton {
+    width: 100%;
+    max-width: 325px;
+    height: 60px;
+
+    font-size: 1.5rem;
+    line-height: 30px;
+
+    transition: .2s;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .planContainer {
+    max-width: 456px;
+
+    gap: 45px;
+  }
+
+  .paragraph {
+    max-width: 340px;
+
+    font-size: 1.35rem;
+  }
+
+  .discountContainer {
+    gap: 7px;
+
+    padding: 16px 23px 16px;
+  }
+
+  .information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+
+    color: var(--blue-200);
+  }
+
+  .discount:nth-child(2) {
+    margin-top: 9px;
+  }
+
+  .paragraphDiscount {
+    font-size: 1.3rem;
+    line-height: 27px;
+  }
+
+  .couponContainer {
+    padding: 18px 16.5px;
+  }
+
+  .inputContainer {
+    max-width: 292px;
+  }
+
+  .buttonDiscount {
+    width: 141px;
+  }
+
+  .totalValueContainer {
+    width: 100%;
+  }
+
+  .paragraphTotalValue {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+
+    color: var(--grey-500);
+  }
+
+  .button {
+    width: 324px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 30px;
+
+    color: var(--white-100);
+    background: var(--orange-100);
+
+    transition: .2s;
+  }
+}

@@ -1,0 +1,147 @@
+.firstGlobalContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+
+  background-color: var(--white-200);
+
+  :global(.RSPBprogressBar) {
+    width: 80% !important;
+    background-color: #C4C4C4 !important;
+    height: 4px;
+  }
+
+  // :global(.MuiInputLabel-root) {
+  //   font-size: medium;   
+  //   line-height: 14px;
+  // }
+
+  .RSPBstep {
+    &:first-child {
+      left: 20% !important;
+    }
+
+    &:nth-child(3) {
+      left: 80% !important;
+    }
+  }
+}
+
+.secondContainer {
+  width: 100%;
+  max-width: 1014px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin-bottom: 19px;
+}
+
+.Body {
+  width: 100%;
+  max-width: 1980px;
+}
+
+.wrappedball {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 52px;
+
+  font-size: 32px;
+  color: var(--white-200);
+
+  margin-top: 30px;
+}
+
+.checkoutHeader {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.titleCheckout {
+  font-size: 32px;
+
+  text-align: center;
+  font-weight: 400;
+
+  color: var(--black-100);
+}
+
+.titleBalls {
+  font-size: 18px;
+
+  text-align: center;
+
+  margin-top: 15px;
+
+  color: var(--grey-100);
+}
+
+.wrappedContainers {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 55px;
+
+  margin-top: 61px;
+  padding-top: 18px;
+}
+
+.chatButtonContainer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .wrappedContainers {
+    margin-top: 91px;
+    padding-top: 22px;
+  }
+
+  .secondContainer {
+    margin-bottom: 22px;
+  }
+
+  .chatButtonContainer {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin: 15px 32px 15px 0;
+  }
+
+  .chatButton {
+    width: 107px;
+    height: 107px;
+
+    border-radius: 50%;
+
+    background: var(--blue-200);
+  }
+}

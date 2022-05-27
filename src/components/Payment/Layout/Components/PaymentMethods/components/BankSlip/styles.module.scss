@@ -1,0 +1,213 @@
+.firstContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 14px;
+
+  margin-bottom: 9px;
+}
+
+.dateInput {
+  width: 100%;
+
+  :global(.MuiFormControl-root) {
+    width: 100%;
+  }
+
+  :global(.MuiInputLabel-formControl) {
+    height: 48px;
+  }
+}
+
+.slipBankDataContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.sectionContainer {
+  display: none;
+}
+
+.dataContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dataTitle {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 23px;
+
+  margin-bottom: 8px;
+
+  color: var(--grey-600);
+}
+
+.dataParagraph {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: .81rem;
+  font-weight: 400;
+  line-height: 15px;
+
+  color: var(--grey-600);
+}
+
+.dataButton {
+  width: 218px;
+  height: 40px;
+
+  border-radius: 50px;
+  margin: 16px 0 8px;
+
+  font-family: 'Ubuntu', sans-serif;
+  font-size: .81rem;
+  font-weight: 400;
+
+  color: var(--white-200);
+  background-color: var(--blue-200);
+}
+
+.dataLink {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: .81rem;
+  font-weight: 400;
+
+  color: var(--blue-200);
+}
+
+.alertContainer {
+  width: 100%;
+  max-width: 323px;
+  height: 187px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+
+  padding: 8px 12px 9px;
+
+  background-color: var(--white-300);
+}
+
+.titleContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.alertTitle {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  color: var(--orange-300);
+}
+
+.list {
+  width: 100%;
+  max-width: 300px;
+
+  padding-left: 18px;
+
+  li {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 12.6px;
+
+    color: var(--grey-100);
+  }
+}
+
+@media (min-width: 1080px) {
+  .slipBankDataContainer {
+    gap: 26px;
+  }
+
+  .dataTitle {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+
+  .dataParagraph {
+    font-size: 1rem;
+  }
+
+  .dataButton {
+    margin: 23px 0 14px;
+  }
+
+  .titleContainer {
+    justify-content: flex-start;
+  }
+
+  .sectionContainer {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 230px;
+
+    button:hover {
+      background: var(--orange-200);
+    }
+  }
+
+  .termsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8.5px;
+  }
+
+  .checkbox {
+    width: 17px;
+    height: 17px;
+  }
+
+  .paragraphTerms {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+
+    color: var(--grey-100);
+  }
+
+  .linkTerms {
+    font-weight: 700;
+    color: var(--blue-100);
+  }
+
+  .bankSlipButton {
+    width: 324px;
+    height: 60px;
+
+    border-radius: 50px;
+
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 30px;
+
+    color: var(--white-100);
+    background: var(--orange-100);
+
+    transition: .2s;
+  }
+}

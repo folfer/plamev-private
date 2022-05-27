@@ -1,0 +1,299 @@
+.paymentMethodsContainer {
+  width: 100%;
+  max-width: 360px;
+
+  padding: 16px 16px 0;
+
+  background: var(--white-200);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.contentContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  width: 100%;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 24px;
+
+  color: var(--grey-300);
+}
+
+.dropdownContainer {
+  width: 100%;
+  max-width: 328px;
+
+  :global(.MuiSelect-select) {
+    padding: 0 14px;
+  }
+
+  :global(.MuiOutlinedInput-root) {
+    width: 100%;
+    max-width: 328px;
+    height: 48px;
+
+    em {
+      font-style: normal;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 24px;
+
+      color: var(--grey-500);
+    }
+  }
+}
+
+.cardContainer {
+  width: 290px;
+  height: 157px;
+
+  padding: 13px 16px 17px;
+  margin: 8px 0;
+
+  background: linear-gradient(226.17deg, #0080FF 0%, #1C9CA3 98.04%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.backCardContainer {
+  width: 290px;
+  height: 157px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 9px;
+
+  background: linear-gradient(226.17deg, #0080FF 0%, #1C9CA3 98.04%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.magnetic {
+  width: 100%;
+  height: 35px;
+
+  background: var(--black-100);
+}
+
+.backData {
+  width: 210px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-self: flex-start;
+
+  margin-left: 12px;
+
+  background: var(--grey-400)
+}
+
+.paragraphContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+
+  margin-right: 15px;
+}
+
+.paragraphCVV {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 10.3px;
+
+  color: var(--grey-300);
+}
+
+.numberCVV {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18.3px;
+
+  color: var(--grey-300);
+}
+
+.logoCardContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.chipContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.numberCard {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+
+  line-height: 18.3px;
+
+  margin: 14px 0;
+
+  color: var(--white-200);
+}
+
+.dataCardContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dataCard {
+  width: 100%;
+  max-width: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dataTitleCard {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  font-size: 9px;
+
+  line-height: 10.3px;
+
+  color: var(--white-200);
+}
+
+.inputDataCard {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.paragraph {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 100;
+  font-size: 8px;
+
+  line-height: 8px;
+
+  color: var(--white-200);
+}
+
+.inputContainer {
+  width: 100%;
+  max-width: 328px;
+
+  display: flex;
+  gap: 2px;
+}
+
+.inputValidityContainer {
+  width: 100%;
+  max-width: 200px;
+}
+
+.inputCVVContainer {
+  width: 100%;
+  max-width: 126px;
+}
+
+.dataInput {
+  width: 100%;
+}
+
+.flagContainer {
+  width: 100%;
+  max-width: 29.2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1080px) {
+  .paymentMethodsContainer {
+    max-width: 472px;
+    min-height: 527px;
+
+    padding: 18px 23px 0;
+
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .dropdownContainer {
+    max-width: none;
+
+    :global(.MuiOutlinedInput-root) {
+      width: 100%;
+      max-width: none;
+      height: 45px;
+    }
+  }
+
+  .cardContainer {
+    width: 316px;
+    height: 165px;
+
+    margin: 0 0 11px;
+  }
+
+  .numberCard {
+    font-size: 1.4rem;
+    line-height: 21px;
+  }
+
+  .backCardContainer {
+    width: 316px;
+    height: 165px;
+    margin: 0 0 11px;
+  }
+
+  .inputContainer {
+    max-width: none;
+    gap: 8px;
+  }
+
+  .inputDataCard {
+    gap: 8px;
+  }
+
+  .inputValidityContainer {
+    max-width: none;
+  }
+
+  .inputCVVContainer {
+    max-width: none;
+  }
+}

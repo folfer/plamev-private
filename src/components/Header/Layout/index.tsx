@@ -24,7 +24,7 @@ export const Header = ({
       </div>
       <div>
         <nav className={styles.navBar}>
-          <Link href="/">Nossos planos</Link>
+          <Link href="/checkouts">Nossos planos</Link>
           <Link href="/">Rede credenciada</Link>
           <Link href="/">Seja um credenciado</Link>
           <Link href="/">Quem somos</Link>

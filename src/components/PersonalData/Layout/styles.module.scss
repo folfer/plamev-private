@@ -1,0 +1,203 @@
+.firstContainer {
+  width: 100%;
+  max-width: 360px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 19px;
+
+  margin-top: 50px;
+}
+
+.personalDataContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 10px 0 26px;
+
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 328px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.dataContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dataTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 24px;
+
+  color: var(--grey-100);
+}
+
+.inputContainer {
+  width: 100%;
+  max-width: 328px;
+}
+
+.input {
+  width: 100%;
+}
+
+.contactContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.inputDDDContainer {
+  width: 80px;
+}
+
+.inputNumberContainer {
+  width: 240px;
+}
+
+.sectionContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.sectionContainerWeb {
+  display: none;
+}
+
+.termsContainer {
+  width: 100%;
+
+  display: flex;
+  align-self: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.checkInput {
+  width: 24px;
+  height: 24px;
+}
+
+.paragraph {
+  width: calc(100% - 28px);
+
+  font-size: .87rem;
+  font-weight: 400;
+  line-height: 21px;
+
+  color: var(--grey-100);
+}
+
+.button {
+  width: 270px;
+  height: 60px;
+
+  border-radius: 50px;
+
+  color: var(--white-100);
+  background: var(--orange-100);
+}
+
+@media (min-width: 420px) {
+  .dataTitle {
+    font-size: 1.35rem
+  }
+
+  .paragraph {
+    font-size: 1.15rem;
+  }
+
+  .button {
+    font-size: 1.3rem;
+
+    transition: .2s;
+  }
+}
+
+@media (min-width: 1080px) {
+  .firstContainer {
+    max-width: 1014px;
+    flex-direction: column;
+    gap: 17px;
+
+    button:hover {
+      background: var(--orange-200);
+    }
+  }
+
+  .personalDataContainer {
+    padding: 36px 0;
+  }
+
+  .contentContainer {
+    max-width: 720px;
+  }
+
+  .sectionContainer {
+    display: none;
+  }
+
+  .dataTitle {
+    font-size: 1.5rem
+  }
+
+  .sectionContainerWeb {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 33px;
+  }
+
+  .inputContainer {
+    max-width: 100%;
+  }
+
+  .inputDDDContainer {
+    width: 220px;
+  }
+
+  .inputNumberContainer {
+    width: 492px;
+  }
+
+  .termsContainer {
+    gap: 8px;
+  }
+
+  .paragraph {
+    width: calc(100% - 32px);
+
+    font-size: 1.35rem;
+    line-height: 25.5px;
+  }
+
+  .button {
+    width: 325px;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+  }
+}

@@ -47,7 +47,7 @@ export const Toppings = () => {
                 hora de uma emergência.
               </h1>
             )}
-            <button className={styles.buttonWantProtect}>
+            <button type="button" className={styles.buttonWantProtect}>
               Quero proteger meu pet
             </button>
           </div>

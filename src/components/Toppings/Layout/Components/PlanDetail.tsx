@@ -37,7 +37,7 @@ export const PlanDetail = ({
     }
   }, []);
   return (
-    <section className={styles.planDetailContainer}>
+    <section className={styles.planDetailContainer} data-aos="flip-right">
       {!contract ? (
         <>
           <div className={styles.wrappedHeader}>
@@ -48,7 +48,7 @@ export const PlanDetail = ({
                     src={LogoProps}
                     alt="plamev"
                     width="100%"
-                    height="100%"
+                    height="80%"
                   />
                 </div>
               ) : (

@@ -1,0 +1,162 @@
+.personalDataContainer {
+  width: 100%;
+  max-width: 360px;
+
+  padding: 16px 16px 27px;
+
+  background: var(--white-200);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.contentContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.CEPContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+}
+
+.addressContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.inputComplementContainer {
+  width: 100%;
+}
+
+.inputAddressContainer {
+  width: 100%;
+
+}
+
+.inputNumberContainer {
+  width: 100%;
+  max-width: 81px;
+}
+
+.title {
+  width: 100%;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 24px;
+
+  color: var(--grey-300);
+}
+
+.dataInput {
+  width: 100%;
+}
+
+.inputCPFContainer {
+  width: 100%;
+  max-width: 328px;
+}
+
+.inputCEPContainer {
+  width: 100%;
+  max-width: 224px;
+}
+
+.dropdownContainer {
+  width: 100%;
+  max-width: 160px;
+
+  :global(.MuiSelect-select) {
+    padding: 0 14px
+  }
+
+  :global(.MuiOutlinedInput-root) {
+    width: 100%;
+    max-width: 160px;
+    height: 40px;
+
+    em {
+      font-style: normal;
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 24px;
+
+      color: var(--grey-500);
+    }
+  }
+}
+
+.paragraph {
+  width: 100px;
+
+  font-size: .68rem;
+  font-weight: 500;
+  line-height: 15px;
+
+  color: var(--blue-200);
+}
+
+@media (min-width: 1080px) {
+  .personalDataContainer {
+    max-width: 430px;
+    min-height: 527px;
+
+    padding: 24px 28px 0 25px;
+  }
+
+  .title {
+    width: 100%;
+
+    font-size: 1.5rem;
+  }
+
+  .inputCPFContainer {
+    max-width: 378px;
+  }
+
+  .inputCEPContainer {
+    max-width: 275px;
+  }
+
+  .paragraph {
+    font-size: .85rem;
+  }
+
+  .inputAddressContainer {
+    max-width: 270px;
+  }
+
+  .inputNumberContainer {
+    max-width: 100px;
+  }
+
+  .inputComplementContainer {
+    width: 100%;
+  }
+
+  .inputAddressContainer {
+    width: 100%;
+  }
+
+  .dropdownContainer {
+    max-width: none;
+
+    :global(.MuiOutlinedInput-root) {
+      max-width: none;
+      height: 45px;
+    }
+  }
+}

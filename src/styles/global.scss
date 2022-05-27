@@ -7,12 +7,18 @@
 }
 
 :root {
-  --white-200: #FFFFFF;
   --white-100: #EEEEEE;
+  --white-200: #FFFFFF;
+  --white-300: #F0F0F0;
 
   --grey-100: #505458;
   --grey-200: #26313C;
   --grey-300: #504F4B;
+  --grey-400: #C4C4C4;
+  --grey-500: #686B6F;
+  --grey-600: #4F4F4F;
+
+  --black-100: #000000;
 
   --blue-100: #2B76B0;
   --blue-200: #036CC2;
@@ -21,9 +27,11 @@
   --blue-500: #209AE5;
   --blue-600: #056FB5;
   --blue-700: #3BBEEF;
+  --blue-800: #0080FF;
 
   --orange-100: #ED8C24;
   --orange-200: #e28521;
+  --orange-300: #FF451A;
 
   --green-100: #79CC43;
   --red-100: #D90606;
