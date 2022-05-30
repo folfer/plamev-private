@@ -4,9 +4,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../styles/global.scss";
 import { AuthProvider } from "../hooks/AuthContext";
-import { AppProps } from "next/app";
 
-function MyApp({ Component, pageProps }: any) {
+function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
       duration: 1000,

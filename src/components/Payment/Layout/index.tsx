@@ -1,14 +1,25 @@
 import styles from "../Layout/styles.module.scss";
 import { Abstract } from "./Components/Abstract";
 import { PaymentMethods } from "./Components/PaymentMethods";
-import { PersonalData } from "./Components/PersonalData";
+import { PaymentData } from "./Components/PaymentData";
+import { IPaymentLayout } from "../data";
 
-export const Payment = () => {
+export const Payment = ({
+  petName,
+  planType,
+  detailsModal,
+  setDetailsModal,
+}: IPaymentLayout) => {
   return (
     <main className={styles.firstContainer}>
-      <PersonalData />
+      <PaymentData />
       <PaymentMethods />
-      <Abstract />
+      <Abstract
+        petName={petName}
+        planType={planType}
+        setDetailsModal={setDetailsModal}
+        detailsModal={detailsModal}
+      />
     </main>
   );
 };

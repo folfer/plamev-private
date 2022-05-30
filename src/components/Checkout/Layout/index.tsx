@@ -8,9 +8,37 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { ICheckoutLayoutProps } from "../data";
+import { useEffect, useState } from "react";
 
-export const Checkout = ({ handleNextStep }: ICheckoutLayoutProps) => {
+export const Checkout = ({
+  handleNextStep,
+  handleTakePlanValue,
+  handleTakePetName,
+  isSelected,
+}: ICheckoutLayoutProps) => {
   const [value, setValue] = React.useState<Date | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    console.log(isSelected);
+    if (typeof window !== "undefined") {
+      const windowWidth = window.innerWidth;
+      const MIN_WINDOW_WIDTH = 580;
+      const MIN_WINDOW_WIDTH_TABLET = 780;
+
+      if (windowWidth <= MIN_WINDOW_WIDTH) {
+        setIsMobile(true);
+        setIsTablet(false);
+      } else if (windowWidth >= MIN_WINDOW_WIDTH_TABLET) {
+        setIsTablet(true);
+        setIsMobile(false);
+      } else {
+        setIsMobile(false);
+        setIsTablet(false);
+      }
+    }
+  }, [isSelected]);
 
   return (
     <main className={styles.firstContainer}>
@@ -24,9 +52,10 @@ export const Checkout = ({ handleNextStep }: ICheckoutLayoutProps) => {
               <div className={styles.nameInput}>
                 <TextField
                   className={styles.dataInput}
-                  size="medium"
+                  size={isMobile ? "small" : "medium"}
                   label="Nome do peludinho"
                   variant="outlined"
+                  onChange={handleTakePetName}
                 />
               </div>
 
@@ -57,6 +86,7 @@ export const Checkout = ({ handleNextStep }: ICheckoutLayoutProps) => {
                 finalValue="27,99"
                 descriptionPlan="1"
                 bonusPlan="+ 1 ano de S.O.S Pet"
+                handleTakePlanValue={handleTakePlanValue}
               />
               <Plan
                 planTitle="Plano Advance"
@@ -64,6 +94,7 @@ export const Checkout = ({ handleNextStep }: ICheckoutLayoutProps) => {
                 finalValue="99,99"
                 descriptionPlan="10"
                 bonusPlan="+ VET COMBO"
+                handleTakePlanValue={handleTakePlanValue}
               />
               <Plan
                 planTitle="Plano Platinum"
@@ -71,6 +102,7 @@ export const Checkout = ({ handleNextStep }: ICheckoutLayoutProps) => {
                 finalValue="157,99"
                 descriptionPlan="15"
                 bonusPlan="+ 1 ano de S.O.S Plus"
+                handleTakePlanValue={handleTakePlanValue}
               />
             </div>
           </div>
@@ -78,6 +110,26 @@ export const Checkout = ({ handleNextStep }: ICheckoutLayoutProps) => {
             <button className={styles.outlineButton}>
               Ganhe 5% de desconto no segundo pet
             </button>
+            {isSelected ? (
+              <button
+                type="button"
+                onClick={handleNextStep}
+                className={styles.normalButton}
+              >
+                Continuar
+              </button>
+            ) : (
+              <button type="button" className={styles.disableNormalButton}>
+                Continuar
+              </button>
+            )}
+          </div>
+        </div>
+        <div className={styles.buttonContainer}>
+          <button className={styles.outlineButton}>
+            Ganhe 5% de desconto no segundo pet
+          </button>
+          {isSelected ? (
             <button
               type="button"
               onClick={handleNextStep}
@@ -85,19 +137,11 @@ export const Checkout = ({ handleNextStep }: ICheckoutLayoutProps) => {
             >
               Continuar
             </button>
-          </div>
-        </div>
-        <div className={styles.buttonContainer}>
-          <button className={styles.outlineButton}>
-            Ganhe 5% de desconto no segundo pet
-          </button>
-          <button
-            type="button"
-            onClick={handleNextStep}
-            className={styles.normalButton}
-          >
-            Continuar
-          </button>
+          ) : (
+            <button type="button" className={styles.disableNormalButton}>
+              Continuar
+            </button>
+          )}
         </div>
       </div>
     </main>

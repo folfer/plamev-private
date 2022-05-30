@@ -157,13 +157,13 @@
   }
 
   .sectionContainer {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 8px;
 
-    margin-top: 230px;
+    margin-top: 20px;
 
     button:hover {
       background: var(--orange-200);
@@ -182,9 +182,38 @@
     height: 17px;
   }
 
+  .checkbox[type="checkbox"]:before {
+    position: relative;
+    display: block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid var(--blue-200);
+    border-radius: 3px;
+    content: "";
+    background: #FFF;
+  }
+
+  .checkbox[type="checkbox"]:after {
+    position: relative;
+    display: block;
+    left: 0px;
+    top: -19px;
+    width: 17px;
+    height: 17px;
+    border: 1px solid var(--blue-200);
+    border-radius: 3px;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .checkbox[type="checkbox"]:checked:after {
+    background-image: url('../../../../../../../../public/checked.svg'), linear-gradient(0deg, var(--blue-200) 0%, var(--blue-200) 0%);
+  }
+
   .paragraphTerms {
     font-family: 'Ubuntu', sans-serif;
-    font-size: .9rem;
+    font-size: 13px;
     font-weight: 400;
 
     color: var(--grey-100);

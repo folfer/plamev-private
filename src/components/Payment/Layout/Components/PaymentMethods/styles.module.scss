@@ -33,14 +33,10 @@
   width: 100%;
   max-width: 328px;
 
-  :global(.MuiSelect-select) {
-    padding: 0 14px;
-  }
-
   :global(.MuiOutlinedInput-root) {
     width: 100%;
     max-width: 328px;
-    height: 48px;
+    height: 40px;
 
     em {
       font-style: normal;
@@ -112,7 +108,7 @@
 }
 
 .paragraphCVV {
-  font-family: 'Ubuntu', sans-serif;
+
   font-size: 9px;
   font-weight: 700;
   line-height: 10.3px;
@@ -121,7 +117,7 @@
 }
 
 .numberCVV {
-  font-family: 'Ubuntu', sans-serif;
+
   font-size: 16px;
   font-weight: 700;
   line-height: 18.3px;
@@ -146,7 +142,7 @@
 }
 
 .numberCard {
-  font-family: 'Ubuntu', sans-serif;
+
   font-weight: 700;
   font-size: 1.1rem;
 
@@ -181,7 +177,7 @@
 }
 
 .dataTitleCard {
-  font-family: 'Ubuntu', sans-serif;
+
   font-weight: 700;
   font-size: 9px;
 
@@ -196,10 +192,12 @@
   align-items: center;
   justify-content: center;
   gap: 2px;
+
+  margin-bottom: 38px;
 }
 
 .paragraph {
-  font-family: 'Ubuntu', sans-serif;
+
   font-weight: 100;
   font-size: 8px;
 
@@ -256,9 +254,12 @@
     max-width: none;
 
     :global(.MuiOutlinedInput-root) {
-      width: 100%;
       max-width: none;
-      height: 45px;
+      height: 50px;
+
+      em {
+        font-size: 16px;
+      }
     }
   }
 
@@ -283,10 +284,26 @@
   .inputContainer {
     max-width: none;
     gap: 8px;
+
+    :global(.MuiInputLabel-root) {
+      font-size: 16px;
+    };
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    };
   }
 
   .inputDataCard {
     gap: 8px;
+
+    :global(.MuiInputLabel-root) {
+      font-size: 16px;
+    }
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .inputValidityContainer {

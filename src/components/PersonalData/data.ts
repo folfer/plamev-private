@@ -4,9 +4,11 @@ export interface IPersonalData {
 
 export interface IPersonalDataLayout extends IPersonalData {
   handleNextStep(): void;
+  handleAccepted: any;
+  isSelected: boolean;
 }
 
 export interface IPlanLayoutProps
   extends Pick<
   IPersonalDataLayout,
-  | 'handleNextStep'> { }
+  | 'handleNextStep' | 'handleAccepted' | 'isSelected'> { }

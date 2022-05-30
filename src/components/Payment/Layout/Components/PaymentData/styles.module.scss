@@ -39,16 +39,27 @@
 
 .inputComplementContainer {
   width: 100%;
+
+  :global(.MuiInputLabel-root) {
+    font-size: 16px;
+  }
 }
 
 .inputAddressContainer {
   width: 100%;
 
+  :global(.MuiInputLabel-root) {
+    font-size: 16px;
+  }
 }
 
 .inputNumberContainer {
   width: 100%;
   max-width: 81px;
+
+  :global(.MuiInputLabel-root) {
+    font-size: 16px;
+  }
 }
 
 .title {
@@ -68,20 +79,24 @@
 .inputCPFContainer {
   width: 100%;
   max-width: 328px;
+
+  :global(.MuiInputLabel-root) {
+    font-size: 16px;
+  }
 }
 
 .inputCEPContainer {
   width: 100%;
   max-width: 224px;
+
+  :global(.MuiInputLabel-root) {
+    font-size: 16px;
+  }
 }
 
 .dropdownContainer {
   width: 100%;
   max-width: 160px;
-
-  :global(.MuiSelect-select) {
-    padding: 0 14px
-  }
 
   :global(.MuiOutlinedInput-root) {
     width: 100%;
@@ -125,10 +140,23 @@
 
   .inputCPFContainer {
     max-width: 378px;
+
+    // :global(.MuiInputLabel-root) {
+    //   font-size: 16px;
+    //   line-height: 17px;
+    // }
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .inputCEPContainer {
     max-width: 275px;
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .paragraph {
@@ -137,18 +165,34 @@
 
   .inputAddressContainer {
     max-width: 270px;
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .inputNumberContainer {
     max-width: 100px;
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .inputComplementContainer {
     width: 100%;
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .inputAddressContainer {
     width: 100%;
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .dropdownContainer {
@@ -156,7 +200,11 @@
 
     :global(.MuiOutlinedInput-root) {
       max-width: none;
-      height: 45px;
+      height: 50px;
+
+      em {
+        font-size: 16px;
+      }
     }
   }
 }

@@ -3,8 +3,35 @@ import TextField from "@mui/material/TextField";
 
 import styles from "../Layout/styles.module.scss";
 import { IPlanLayoutProps } from "../data";
+import { useEffect, useState } from "react";
 
-export const PersonalData = ({ handleNextStep }: IPlanLayoutProps) => {
+export const PersonalData = ({
+  handleNextStep,
+  handleAccepted,
+  isSelected,
+}: IPlanLayoutProps) => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const windowWidth = window.innerWidth;
+      const MIN_WINDOW_WIDTH = 580;
+      const MIN_WINDOW_WIDTH_TABLET = 780;
+
+      if (windowWidth <= MIN_WINDOW_WIDTH) {
+        setIsMobile(true);
+        setIsTablet(false);
+      } else if (windowWidth >= MIN_WINDOW_WIDTH_TABLET) {
+        setIsTablet(true);
+        setIsMobile(false);
+      } else {
+        setIsMobile(false);
+        setIsTablet(false);
+      }
+    }
+  }, []);
+
   return (
     <main className={styles.firstContainer}>
       <div className={styles.personalDataContainer}>
@@ -14,7 +41,7 @@ export const PersonalData = ({ handleNextStep }: IPlanLayoutProps) => {
             <div className={styles.inputContainer}>
               <TextField
                 className={styles.input}
-                size="small"
+                size={isMobile ? "small" : "medium"}
                 label="Nome completo"
                 variant="outlined"
               />
@@ -22,7 +49,7 @@ export const PersonalData = ({ handleNextStep }: IPlanLayoutProps) => {
             <div className={styles.inputContainer}>
               <TextField
                 className={styles.input}
-                size="small"
+                size={isMobile ? "small" : "medium"}
                 label="E-mail"
                 variant="outlined"
               />
@@ -31,7 +58,7 @@ export const PersonalData = ({ handleNextStep }: IPlanLayoutProps) => {
               <div className={styles.inputDDDContainer}>
                 <TextField
                   className={styles.input}
-                  size="small"
+                  size={isMobile ? "small" : "medium"}
                   label="DDD"
                   variant="outlined"
                 />
@@ -39,7 +66,7 @@ export const PersonalData = ({ handleNextStep }: IPlanLayoutProps) => {
               <div className={styles.inputNumberContainer}>
                 <TextField
                   className={styles.input}
-                  size="small"
+                  size={isMobile ? "small" : "medium"}
                   label="Telefone"
                   variant="outlined"
                 />
@@ -48,39 +75,61 @@ export const PersonalData = ({ handleNextStep }: IPlanLayoutProps) => {
           </div>
           <section className={styles.sectionContainer}>
             <div className={styles.termsContainer}>
-              <input className={styles.checkInput} type="checkbox" />
+              <input
+                className={styles.checkInput}
+                onChange={handleAccepted}
+                type="checkbox"
+                value={1}
+              />
               <p className={styles.paragraph}>
                 Declaro que estou de acordo em receber ofertas e conteúdos da
                 Plamev Pet. Seus dados não serão compartilhados com terceiros,
                 ok?
               </p>
             </div>
-            <button
-              className={styles.button}
-              type="button"
-              onClick={handleNextStep}
-            >
-              Continuar
-            </button>
+            {isSelected ? (
+              <button
+                type="button"
+                onClick={handleNextStep}
+                className={styles.button}
+              >
+                Continuar
+              </button>
+            ) : (
+              <button type="button" className={styles.disableButton}>
+                Continuar
+              </button>
+            )}
           </section>
         </div>
       </div>
 
       <section className={styles.sectionContainerWeb}>
         <div className={styles.termsContainer}>
-          <input className={styles.checkInput} type="checkbox" />
+          <input
+            className={styles.checkInput}
+            onChange={handleAccepted}
+            type="checkbox"
+            value={1}
+          />
           <p className={styles.paragraph}>
             Declaro que estou de acordo em receber ofertas e conteúdos da Plamev
             Pet. Seus dados não serão compartilhados com terceiros, ok?
           </p>
         </div>
-        <button
-          type="button"
-          onClick={handleNextStep}
-          className={styles.button}
-        >
-          Continuar
-        </button>
+        {isSelected ? (
+          <button
+            type="button"
+            onClick={handleNextStep}
+            className={styles.button}
+          >
+            Continuar
+          </button>
+        ) : (
+          <button type="button" className={styles.disableButton}>
+            Continuar
+          </button>
+        )}
       </section>
     </main>
   );

@@ -18,11 +18,32 @@ interface IAddressData {
   uf: string;
 }
 
-export const PersonalData = () => {
+export const PaymentData = () => {
   const [getCep, setGetCep] = useState<string>("");
   const [address, setAddress] = useState<string>("");
   const [neighborhood, setNeighborhood] = useState<string>("");
   const [addressData, setAddressData] = useState<IAddressData>();
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const windowWidth = window.innerWidth;
+      const MIN_WINDOW_WIDTH = 580;
+      const MIN_WINDOW_WIDTH_TABLET = 780;
+
+      if (windowWidth <= MIN_WINDOW_WIDTH) {
+        setIsMobile(true);
+        setIsTablet(false);
+      } else if (windowWidth >= MIN_WINDOW_WIDTH_TABLET) {
+        setIsTablet(true);
+        setIsMobile(false);
+      } else {
+        setIsMobile(false);
+        setIsTablet(false);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (getCep.length >= 8) {
@@ -57,7 +78,7 @@ export const PersonalData = () => {
         <div className={styles.inputCPFContainer}>
           <TextField
             className={styles.dataInput}
-            size="small"
+            size={isMobile ? "small" : "medium"}
             label="CPF"
             variant="outlined"
           />
@@ -66,7 +87,7 @@ export const PersonalData = () => {
           <div className={styles.inputCEPContainer}>
             <TextField
               className={styles.dataInput}
-              size="small"
+              size={isMobile ? "small" : "medium"}
               label="CEP"
               variant="outlined"
               inputProps={{ maxLength: 8 }}
@@ -82,7 +103,7 @@ export const PersonalData = () => {
           <div className={styles.inputAddressContainer}>
             <TextField
               className={styles.dataInput}
-              size="small"
+              size={isMobile ? "small" : "medium"}
               label="Endereço"
               value={addressData ? addressData?.logradouro : address}
               variant="outlined"
@@ -93,7 +114,7 @@ export const PersonalData = () => {
           <div className={styles.inputNumberContainer}>
             <TextField
               className={styles.dataInput}
-              size="small"
+              size={isMobile ? "small" : "medium"}
               label="Número"
               variant="outlined"
             />
@@ -104,7 +125,7 @@ export const PersonalData = () => {
           <div className={styles.inputComplementContainer}>
             <TextField
               className={styles.dataInput}
-              size="small"
+              size={isMobile ? "small" : "medium"}
               label="Complemento"
               variant="outlined"
             />
@@ -113,7 +134,7 @@ export const PersonalData = () => {
           <div className={styles.inputAddressContainer}>
             <TextField
               className={styles.dataInput}
-              size="small"
+              size={isMobile ? "small" : "medium"}
               label="Bairro"
               value={addressData ? addressData?.bairro : neighborhood}
               variant="outlined"
@@ -143,7 +164,7 @@ export const PersonalData = () => {
               displayEmpty
               renderValue={() => {
                 return (
-                  <em>{addressData ? addressData?.localidade : "Cidade"}</em>
+                  <em>{addressData ? addressData?.localidade : "Estado"}</em>
                 );
               }}
             >

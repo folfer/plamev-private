@@ -98,6 +98,35 @@
   height: 24px;
 }
 
+.checkInput[type="checkbox"]:before {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--blue-200);
+  border-radius: 3px;
+  content: "";
+  background: #FFF;
+}
+
+.checkInput[type="checkbox"]:after {
+  position: relative;
+  display: block;
+  left: 0px;
+  top: -26px;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--blue-200);
+  border-radius: 3px;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkInput[type="checkbox"]:checked:after {
+  background-image: url('../../../../public/checked.svg'), linear-gradient(0deg, var(--blue-200) 0%, var(--blue-200) 0%);
+}
+
 .paragraph {
   width: calc(100% - 28px);
 
@@ -114,6 +143,27 @@
 
   border-radius: 50px;
 
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: var(--white-100);
+  background: var(--orange-100);
+}
+
+.disableButton {
+  width: 270px;
+  height: 60px;
+
+  border-radius: 50px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+
+  opacity: 0.2;
+  cursor: not-allowed;
+
   color: var(--white-100);
   background: var(--orange-100);
 }
@@ -128,6 +178,12 @@
   }
 
   .button {
+    font-size: 1.3rem;
+
+    transition: .2s;
+  }
+
+  .disableButton {
     font-size: 1.3rem;
 
     transition: .2s;
@@ -172,14 +228,38 @@
 
   .inputContainer {
     max-width: 100%;
+
+    :global(.MuiInputLabel-root) {
+      font-size: 16px;
+    }
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .inputDDDContainer {
     width: 220px;
+
+    :global(.MuiInputLabel-root) {
+      font-size: 16px;
+    }
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .inputNumberContainer {
     width: 492px;
+
+    :global(.MuiInputLabel-root) {
+      font-size: 16px;
+    }
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
   }
 
   .termsContainer {
@@ -194,6 +274,13 @@
   }
 
   .button {
+    width: 325px;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+  }
+  .disableButton {
     width: 325px;
 
     font-size: 1.5rem;

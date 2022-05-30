@@ -13,6 +13,27 @@ import { MdDone } from "react-icons/md";
 export default function Checkouts() {
   const { newStep } = useAuth();
   const [progressCount, setProgressCount] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const windowWidth = window.innerWidth;
+      const MIN_WINDOW_WIDTH = 580;
+      const MIN_WINDOW_WIDTH_TABLET = 780;
+
+      if (windowWidth <= MIN_WINDOW_WIDTH) {
+        setIsMobile(true);
+        setIsTablet(false);
+      } else if (windowWidth >= MIN_WINDOW_WIDTH_TABLET) {
+        setIsTablet(true);
+        setIsMobile(false);
+      } else {
+        setIsMobile(false);
+        setIsTablet(false);
+      }
+    }
+  }, []);
 
   useEffect(() => {
     if (newStep === 0) {
@@ -45,7 +66,9 @@ export default function Checkouts() {
                   >
                     {progressCount >= 30 ? <MdDone /> : 1}
                   </div>
-                  <h1 className={styled.titleBalls}>Escolha de planos</h1>
+                  <h1 className={styled.titleBalls}>
+                    {isMobile ? "Planos" : "Escolha de planos"}
+                  </h1>
                 </div>
               )}
             </Step>
@@ -60,7 +83,9 @@ export default function Checkouts() {
                   >
                     {progressCount >= 55 ? <MdDone /> : 2}
                   </div>
-                  <h1 className={styled.titleBalls}>Dados pessoais</h1>
+                  <h1 className={styled.titleBalls}>
+                    {isMobile ? "Dados" : "Dados pessoais"}
+                  </h1>
                 </div>
               )}
             </Step>
@@ -75,7 +100,9 @@ export default function Checkouts() {
                   >
                     {progressCount >= 100 ? <MdDone /> : 3}
                   </div>
-                  <h1 className={styled.titleBalls}>Pagamentos</h1>
+                  <h1 className={styled.titleBalls}>
+                    {isMobile ? "Pagamento" : "Pagamentos"}
+                  </h1>
                 </div>
               )}
             </Step>

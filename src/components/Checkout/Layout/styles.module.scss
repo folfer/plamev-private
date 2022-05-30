@@ -55,17 +55,24 @@
 
 .nameInput {
   width: 100%;
+
+  :global(.MuiInputLabel-root) {
+    font-size: 16px;
+  }
 }
 
 .dateInput {
-  width: 60%;
+  width: 100%;
 
   :global(.MuiFormControl-root) {
     width: 100%;
   }
+
+  // :global(.MuiInputLabel-root) {
+  //   font-size: medium;
+  //   top: -2px;
+  // }
 }
-
-
 
 .dataInput {
   width: 100%;
@@ -140,14 +147,41 @@
   background: var(--orange-100);
 }
 
+.disableNormalButton {
+  width: 160px;
+  height: 60px;
+
+  border-radius: 50px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 24px;
+
+  opacity: 0.2;
+  cursor: not-allowed;
+
+  color: var(--white-100);
+  background: var(--orange-100);
+}
+
 @media (min-width: 420px) {
   .buttonContainer {
+    button:nth-child(1):hover {
+      color: var(--white-200);
+      background: var(--blue-200);
+    }
+
     button:nth-child(2):hover {
       background: var(--orange-200);
     }
   }
 
   .buttonContainerWeb {
+    button:nth-child(1):hover {
+      color: var(--white-200);
+      background: var(--blue-200);
+    }
+
     button:nth-child(2):hover {
       background: var(--orange-200);
     }
@@ -163,9 +197,17 @@
 
   .outlineButton {
     font-size: 1.1rem;
+
+    transition: .2s;
   }
 
   .normalButton {
+    font-size: 1.3rem;
+
+    transition: .2s;
+  }
+
+  .disableNormalButton {
     font-size: 1.3rem;
 
     transition: .2s;
@@ -206,6 +248,34 @@
 
   .dataContainer {
     max-width: 958px;
+  }
+
+  .nameInput {
+    width: 100%;
+
+    :global(.MuiInputLabel-root) {
+      font-size: 16px;
+    }
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.115em;
+    }
+  }
+
+  .dateInput {
+    width: 60%;
+
+    :global(.MuiFormControl-root) {
+      width: 100%;
+    }
+
+    :global(.MuiInputLabel-root) {
+      font-size: medium;
+    }
+
+    :global(.MuiOutlinedInput-root) {
+      letter-spacing: 0.11em;
+    }
   }
 
   .inputContainer {
@@ -255,6 +325,17 @@
   }
 
   .normalButton {
+    width: 200px;
+    height: 60px;
+
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 30px;
+
+    box-shadow: none;
+  }
+
+  .disableNormalButton {
     width: 200px;
     height: 60px;
 
