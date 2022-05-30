@@ -16,6 +16,20 @@ import styles from "./styles.module.scss";
 export default function Home() {
   return (
     <div className={styles.firstGlobalContainer}>
+      <Head>
+        <title>Plamev</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+        <meta name="description" content="plamev" />
+
+        <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <div className={styles.Body}>
         <Toppings />
         <Contraction />

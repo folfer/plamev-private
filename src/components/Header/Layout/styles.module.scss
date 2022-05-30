@@ -23,6 +23,12 @@
   }
 }
 
+
+.navItem {
+  width: 100%;
+  border-bottom: 1px solid orange
+}
+
 .ImageLogo {
   width: 45px;
   height: 45px;
@@ -275,6 +281,5 @@
     font-size: 1.125rem;
 
     z-index: 999;
-
   }
-}
+} 

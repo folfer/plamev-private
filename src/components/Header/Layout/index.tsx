@@ -75,11 +75,21 @@ export const Header = ({
               </button>
             </div>
             <nav className={styles.navMenu}>
-              <Link href="/">Nossos planos</Link>
-              <Link href="/">Rede credenciada</Link>
-              <Link href="/">Seja um credenciado</Link>
-              <Link href="/">Quem somos</Link>
-              <Link href="/">Blog</Link>
+              <div className={styles.navItem}>
+                <Link href="/">Nossos planos</Link>
+              </div>
+              <div className={styles.navItem}>
+                <Link href="/">Rede credenciada</Link>
+              </div>
+              <div className={styles.navItem}>
+                <Link href="/">Seja um credenciado</Link>
+              </div>
+              <div className={styles.navItem}>
+                <Link href="/">Quem somos</Link>
+              </div>
+              <div className={styles.navItem}>
+                <Link href="/">Blog</Link>
+              </div>
             </nav>
           </div>
         </div>

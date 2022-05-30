@@ -14,12 +14,10 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
+    <AuthProvider>
       <Header />
-      <AuthProvider>
-        <Component {...pageProps} />
-      </AuthProvider>
-    </>
+      <Component {...pageProps} />
+    </AuthProvider>
   );
 }
 

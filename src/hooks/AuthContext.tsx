@@ -1,5 +1,11 @@
-import { useCallback, useState, useContext, ReactNode, useEffect } from "react";
-import { createContext, useContextSelector } from "use-context-selector";
+import {
+  useCallback,
+  useState,
+  useContext,
+  ReactNode,
+  useEffect,
+  createContext,
+} from "react";
 // interface User {
 //   id: number;
 //   email: string;
@@ -36,11 +42,14 @@ interface ProviderProps {
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-export const AuthProvider: React.FC = ({ children }: any) => {
+export const AuthProvider: React.FC = ({ children }: ProviderProps) => {
   const [newStep, setNewStep] = useState<number>(0);
   const [planType, setPlanType] = useState<string>("");
   const [petName, setPetName] = useState<string>("");
 
+  useEffect(() => {
+    console.log(petName);
+  }, []);
   // const [data, setData] = useState<AuthState>(() => {
   //   const token = localStorage.getItem("@SAE:token");
   //   const user = localStorage.getItem("@SAE:user");
@@ -90,15 +99,11 @@ export const AuthProvider: React.FC = ({ children }: any) => {
 };
 
 export function useAuth(): AuthContextData {
-  return {
-    newStep: useContextSelector(AuthContext, ({ newStep }) => newStep),
-    setNewStep: useContextSelector(AuthContext, ({ setNewStep }) => setNewStep),
-    setPlanType: useContextSelector(
-      AuthContext,
-      ({ setPlanType }) => setPlanType
-    ),
-    planType: useContextSelector(AuthContext, ({ planType }) => planType),
-    petName: useContextSelector(AuthContext, ({ petName }) => petName),
-    setPetName: useContextSelector(AuthContext, ({ setPetName }) => setPetName),
-  };
+  const context = useContext(AuthContext);
+
+  if (!context) {
+    throw new Error("useAuth precisa ser utilizado junto ao AuthProvider");
+  }
+
+  return context;
 }
