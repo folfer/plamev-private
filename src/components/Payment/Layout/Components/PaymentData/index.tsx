@@ -164,7 +164,7 @@ export const PaymentData = () => {
               displayEmpty
               renderValue={() => {
                 return (
-                  <em>{addressData ? addressData?.localidade : "Estado"}</em>
+                  <em>{addressData ? addressData?.localidade : "Cidade"}</em>
                 );
               }}
             >

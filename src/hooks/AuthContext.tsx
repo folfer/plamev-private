@@ -5,7 +5,7 @@ import {
   ReactNode,
   useEffect,
   createContext,
-} from "react";
+} from 'react'
 // interface User {
 //   id: number;
 //   email: string;
@@ -28,28 +28,25 @@ interface AuthContextData {
   // user: User;
   // signIn(credentials: SignInCredentials): Promise<void>;
   // signOut(): void;
-  newStep: number;
-  setNewStep(step: number): void;
-  setPlanType(planType: string): void;
-  planType: string;
-  petName: string;
-  setPetName(petName: string): void;
+  newStep: number
+  setNewStep(step: number): void
+  setPlanType(planType: string): void
+  planType: string
+  petName: string
+  setPetName(petName: string): void
 }
 
 interface ProviderProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
-const AuthContext = createContext<AuthContextData>({} as AuthContextData);
+const AuthContext = createContext<AuthContextData>({} as AuthContextData)
 
 export const AuthProvider: React.FC = ({ children }: ProviderProps) => {
-  const [newStep, setNewStep] = useState<number>(0);
-  const [planType, setPlanType] = useState<string>("");
-  const [petName, setPetName] = useState<string>("");
+  const [newStep, setNewStep] = useState<number>(0)
+  const [planType, setPlanType] = useState<string>('')
+  const [petName, setPetName] = useState<string>('')
 
-  useEffect(() => {
-    console.log(petName);
-  }, []);
   // const [data, setData] = useState<AuthState>(() => {
   //   const token = localStorage.getItem("@SAE:token");
   //   const user = localStorage.getItem("@SAE:user");
@@ -95,15 +92,15 @@ export const AuthProvider: React.FC = ({ children }: ProviderProps) => {
     >
       {children}
     </AuthContext.Provider>
-  );
-};
+  )
+}
 
 export function useAuth(): AuthContextData {
-  const context = useContext(AuthContext);
+  const context = useContext(AuthContext)
 
   if (!context) {
-    throw new Error("useAuth precisa ser utilizado junto ao AuthProvider");
+    throw new Error('useAuth precisa ser utilizado junto ao AuthProvider')
   }
 
-  return context;
+  return context
 }

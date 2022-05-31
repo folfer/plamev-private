@@ -22,7 +22,14 @@ export const PaymentMethods = () => {
       <div className={styles.contentContainer}>
         <h1 className={styles.title}>Informe os dados de pagamento:</h1>
         <div className={styles.dropdownContainer}>
-          <Select className={styles.dropdown} onChange={handleChangeSelect}>
+          <Select
+            className={styles.dropdown}
+            onChange={handleChangeSelect}
+            displayEmpty
+            renderValue={() => {
+              return <em>Cartão de Crédito</em>;
+            }}
+          >
             <MenuItem value="0">Cartão de Crédito</MenuItem>
             <MenuItem value="1">Boleto</MenuItem>
           </Select>

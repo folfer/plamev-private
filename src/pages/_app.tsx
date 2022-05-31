@@ -1,11 +1,12 @@
-import { useEffect } from "react";
-import { Header } from "../components/Header";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "../styles/global.scss";
-import { AuthProvider } from "../hooks/AuthContext";
+import { useEffect } from 'react';
+import AOS from 'aos';
 
-function MyApp({ Component, pageProps }) {
+import 'aos/dist/aos.css';
+import '../styles/global.scss';
+import { AuthProvider } from '../hooks/AuthContext';
+import { Header } from '../components/Header';
+
+function MyApp({ Component, pageProps }: any) {
   useEffect(() => {
     AOS.init({
       duration: 1000,

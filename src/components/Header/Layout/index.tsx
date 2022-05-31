@@ -10,6 +10,7 @@ import { BsPeople } from "react-icons/bs";
 import { BiUserCircle } from "react-icons/bi";
 import { FiMenu } from "react-icons/fi";
 import { RiMenuFoldFill } from "react-icons/ri";
+import { useEffect, useState } from "react";
 
 export const Header = ({
   isOpenFastAccess,
@@ -17,6 +18,19 @@ export const Header = ({
   toggleMenu,
   isOpenMenuMobile,
 }: IHeaderLayoutProps) => {
+  const [isCheckout, setIsCheckout] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (window !== undefined) {
+      const url = window.location.href;
+      const lastSegment = url.split("/")[3];
+
+      if (lastSegment === "checkouts") {
+        setIsCheckout(true);
+      }
+    }
+  }, []);
+
   return (
     <div className={styles.firstContainer}>
       <div className={styles.ImageLogo}>
@@ -24,11 +38,21 @@ export const Header = ({
       </div>
       <div>
         <nav className={styles.navBar}>
-          <Link href="/checkouts">Nossos planos</Link>
-          <Link href="/">Rede credenciada</Link>
-          <Link href="/">Seja um credenciado</Link>
-          <Link href="/">Quem somos</Link>
-          <Link href="/">Blog</Link>
+          <div className={isCheckout ? styles.navItemActive : styles.navItem}>
+            <Link href="/checkouts">Nossos planos</Link>
+          </div>
+          <div className={styles.navItem}>
+            <Link href="/">Rede credenciada</Link>{" "}
+          </div>
+          <div className={styles.navItem}>
+            <Link href="/">Seja um credenciado</Link>
+          </div>
+          <div className={styles.navItem}>
+            <Link href="/">Quem somos</Link>
+          </div>
+          <div className={styles.navItem}>
+            <Link href="/">Blog</Link>
+          </div>
         </nav>
       </div>
       <div className={styles.containerLogin}>
@@ -75,21 +99,11 @@ export const Header = ({
               </button>
             </div>
             <nav className={styles.navMenu}>
-              <div className={styles.navItem}>
-                <Link href="/">Nossos planos</Link>
-              </div>
-              <div className={styles.navItem}>
-                <Link href="/">Rede credenciada</Link>
-              </div>
-              <div className={styles.navItem}>
-                <Link href="/">Seja um credenciado</Link>
-              </div>
-              <div className={styles.navItem}>
-                <Link href="/">Quem somos</Link>
-              </div>
-              <div className={styles.navItem}>
-                <Link href="/">Blog</Link>
-              </div>
+              <Link href="/">Nossos planos</Link>
+              <Link href="/">Rede credenciada</Link>
+              <Link href="/">Seja um credenciado</Link>
+              <Link href="/">Quem somos</Link>
+              <Link href="/">Blog</Link>
             </nav>
           </div>
         </div>

@@ -21,7 +21,6 @@ export const Checkout = ({
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
-    console.log(isSelected);
     if (typeof window !== "undefined") {
       const windowWidth = window.innerWidth;
       const MIN_WINDOW_WIDTH = 580;
