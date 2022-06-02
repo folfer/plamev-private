@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react";
-import { Navigation, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useEffect } from 'react';
+import { Navigation, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { DoubtsVideo } from "./Components";
-import peopleOne from "../../../../public/peopleone.png";
-import peopleTwo from "../../../../public/peopletwo.png";
-import peopleThree from "../../../../public/peoplethree.png";
+import { DoubtsVideo } from './Components';
+import peopleOne from '../../../../public/peopleone.png';
+import peopleTwo from '../../../../public/peopletwo.png';
+import peopleThree from '../../../../public/peoplethree.png';
 
-import styles from "../Layout/styles.module.scss";
-import "swiper/css";
-import "swiper/css/navigation";
+import styles from '../Layout/styles.module.scss';
+import 'swiper/css';
+import 'swiper/css/navigation';
 
 export const Doubts = () => {
   const [slidesPerView, setSlidePerView] = useState(4);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const windowWidth = window.innerWidth;
       if (windowWidth < 500) {
         setSlidePerView(1);
@@ -44,8 +44,8 @@ export const Doubts = () => {
         spaceBetween={5}
         slidesPerView={slidesPerView}
         navigation
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        onSwiper={swiper => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
         className={styles.sliderFather}
       >
         <SwiperSlide className={styles.sliderContainerSwap}>

@@ -50,7 +50,6 @@
         }
       ],
       "react/react-in-jsx-scope": "off",
-      "no-use-before-define": "off",
       "camelcase": "off",
       "react/prop-types": "off",
       "react/jsx-one-expression-per-line": "off"

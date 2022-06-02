@@ -1,23 +1,23 @@
-import { BsChat } from "react-icons/bs";
+import { IoIosArrowRoundBack } from 'react-icons/io';
 
-import styled from "./styles.module.scss";
-import "react-step-progress-bar/styles.css";
-import { ProgressBar, Step } from "react-step-progress-bar";
-import { Checkout } from "../../components/Checkout";
-import { Payment } from "../../components/Payment";
-import { PersonalData } from "../../components/PersonalData";
-import { useAuth } from "../../hooks/AuthContext";
-import { useEffect, useState } from "react";
-import { MdDone } from "react-icons/md";
+import styled from './styles.module.scss';
+import 'react-step-progress-bar/styles.css';
+import { ProgressBar, Step } from 'react-step-progress-bar';
+import { Checkout } from '../../components/Checkout';
+import { Payment } from '../../components/Payment';
+import { PersonalData } from '../../components/PersonalData';
+import { useAuth } from '../../hooks/AuthContext';
+import { useEffect, useState } from 'react';
+import { MdDone } from 'react-icons/md';
 
 export default function Checkouts() {
-  const { newStep } = useAuth();
+  const { newStep, setNewStep } = useAuth();
   const [progressCount, setProgressCount] = useState<number>(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const windowWidth = window.innerWidth;
       const MIN_WINDOW_WIDTH = 580;
       const MIN_WINDOW_WIDTH_TABLET = 780;
@@ -61,13 +61,13 @@ export default function Checkouts() {
                   <div
                     className={styled.ball}
                     style={{
-                      background: `${accomplished ? "#036CC2" : "#B3C9D4"}`,
+                      background: `${accomplished ? '#036CC2' : '#B3C9D4'}`,
                     }}
                   >
                     {progressCount >= 30 ? <MdDone /> : 1}
                   </div>
                   <h1 className={styled.titleBalls}>
-                    {isMobile ? "Planos" : "Escolha de planos"}
+                    {isMobile ? 'Planos' : 'Escolha de planos'}
                   </h1>
                 </div>
               )}
@@ -78,13 +78,13 @@ export default function Checkouts() {
                   <div
                     className={styled.ball}
                     style={{
-                      background: `${accomplished ? "#036CC2" : "#B3C9D4"}`,
+                      background: `${accomplished ? '#036CC2' : '#B3C9D4'}`,
                     }}
                   >
                     {progressCount >= 55 ? <MdDone /> : 2}
                   </div>
                   <h1 className={styled.titleBalls}>
-                    {isMobile ? "Dados" : "Dados pessoais"}
+                    {isMobile ? 'Dados' : 'Dados pessoais'}
                   </h1>
                 </div>
               )}
@@ -95,13 +95,13 @@ export default function Checkouts() {
                   <div
                     className={styled.ball}
                     style={{
-                      background: `${accomplished ? "#036CC2" : "#B3C9D4"}`,
+                      background: `${accomplished ? '#036CC2' : '#B3C9D4'}`,
                     }}
                   >
                     {progressCount >= 100 ? <MdDone /> : 3}
                   </div>
                   <h1 className={styled.titleBalls}>
-                    {isMobile ? "Pagamento" : "Pagamentos"}
+                    {isMobile ? 'Pagamento' : 'Pagamentos'}
                   </h1>
                 </div>
               )}
@@ -109,8 +109,22 @@ export default function Checkouts() {
           </ProgressBar>
         </div>
         {newStep === 0 && <Checkout />}
-        {newStep === 1 && <PersonalData />}
-        {newStep === 2 && <Payment />}
+        {newStep === 1 && (
+          <div>
+            <PersonalData />
+            <button className={styled.backButton} onClick={() => setNewStep(0)}>
+              <IoIosArrowRoundBack size={35} /> voltar
+            </button>
+          </div>
+        )}
+        {newStep === 2 && (
+          <div>
+            <Payment />
+            <button className={styled.backButton} onClick={() => setNewStep(1)}>
+              <IoIosArrowRoundBack size={35} /> voltar
+            </button>
+          </div>
+        )}
       </div>
       {/* <div className={styled.chatButtonContainer}>
         <button className={styled.chatButton}>

@@ -7,6 +7,7 @@ export interface ICheckout {
   bonusPlan?: string;
   handleTakePlanValue: any;
   handleTakePetName: any;
+  index: any;
 }
 
 export interface ICheckoutLayout extends ICheckout {
@@ -24,4 +25,4 @@ export interface ICheckoutLayoutProps
 export interface IPlanLayoutProps
   extends Pick<
   ICheckoutLayout,
-  | 'bonusPlan' | 'planTitle' | 'descriptionPlan' | 'initialValue' | 'finalValue' | 'handleTakePlanValue'> { }
+  | 'bonusPlan' | 'planTitle' | 'descriptionPlan' | 'initialValue' | 'finalValue' | 'handleTakePlanValue' | 'index'> { }

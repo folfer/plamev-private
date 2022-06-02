@@ -1,0 +1,146 @@
+.accreditedVantageContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 0 35px;
+}
+
+.contentContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.imageContainer {
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  border-radius: 8px;
+}
+
+.textContainer {
+  width: 75%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: var(--grey-100);
+}
+
+.list {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--grey-100);
+}
+
+.itemList {
+  list-style-image: url('../../../../public/highlighter.svg');
+}
+
+.button {
+  width: 100%;
+  max-width: 280px;
+  height: 50px;
+
+  border-radius: 50px;
+  margin: 0 30px;
+
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19.5px;
+
+  color: var(--white-100);
+  background: var(--blue-100);
+}
+
+@media (min-width: 1080px) {
+  .accreditedVantageContainer {
+    margin: 0 0 85px;
+  }
+
+  .contentContainer {
+    max-width: 100%;
+
+    flex-direction: row;
+
+    gap: 0;
+  }
+
+  .imageContainer {
+    width: 100%;
+    max-width: 792px;
+
+    margin-left: 50px;
+  }
+
+  .image {
+    border-radius: 0;
+  }
+
+  .textContainer {
+    width: 100%;
+    max-width: 480px;
+    height: 100%;
+
+    align-items: flex-start;
+    justify-content: center;
+    gap: 27px;
+
+    margin: 0 0 0 50px;
+
+    button:hover {
+      background: var(--blue-900);
+    }
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .list {
+    width: 100%;
+    max-width: 480px;
+    font-size: 18px;
+    line-height: 27px;
+
+    margin-left: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .button {
+    max-width: 295px;
+
+    font-size: 18px;
+    line-height: 27px;
+
+    transition: .2s;
+  }
+}

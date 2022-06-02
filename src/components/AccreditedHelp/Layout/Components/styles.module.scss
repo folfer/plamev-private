@@ -1,0 +1,38 @@
+.questionBoxContainer {
+  width: 100%;
+  max-width: 344px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 8px;
+  border-radius: 10px;
+
+  background-color: var(--white-100);
+
+  @media (min-width: 768px) {
+    max-width: 600px;
+    height: 65px;
+
+    padding: 0 10px;
+  }
+
+  @media (min-width: 1080px) {
+    max-width: 1175px;
+  }
+}
+
+.questionText {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--grey-300);
+
+  @media (min-width: 768px) {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

@@ -1,10 +1,11 @@
-import { Checkout as Layout } from "./Layout";
-import { useAuth } from "../../hooks/AuthContext";
-import { useState } from "react";
+import { Checkout as Layout } from './Layout';
+import { useAuth } from '../../hooks/AuthContext';
+import { useState } from 'react';
 
 export const Checkout = (props: any) => {
   const { setNewStep, setPlanType, setPetName } = useAuth();
   const [isSelected, setIsSelected] = useState<boolean>(false);
+  const [firstPlan, setFirstPlan] = useState<boolean>(false);
 
   function handleNextStep() {
     setNewStep(1);
@@ -26,6 +27,7 @@ export const Checkout = (props: any) => {
     handleTakePlanValue,
     handleTakePetName,
     isSelected,
+    firstPlan,
   };
 
   return <Layout {...layoutProps} />;

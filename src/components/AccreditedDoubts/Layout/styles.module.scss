@@ -1,0 +1,200 @@
+.accreditedDoubtsContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  margin: 42px 0;
+
+  :global(.swiper) {
+    width: 100% !important;
+  }
+}
+
+.doubtsTextContainer {
+  width: 100%;
+  max-width: 340px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+
+  margin: 0 15px;
+}
+
+.doubtsTitle {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+
+  text-align: center;
+
+  margin: 0 10px;
+
+  color: var(--grey-100);
+}
+
+.doubtsParagraph {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 18px;
+
+  text-align: center;
+
+  margin: 0 10px;
+
+  color: var(--grey-100);
+}
+
+.sliderFather {
+  width: 95%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  :global(.swiper-slide) {
+    width: 100% !important;
+  }
+
+  :global(.swiper-button-next) {
+    top: 50%;
+    right: 3%;
+    background: var(--blue-100);
+    border-radius: 100%;
+    width: 33px;
+    height: 33px;
+  }
+
+  :global(.swiper-button-prev) {
+    top: 50%;
+    left: 3%;
+    background: var(--blue-100);
+    border-radius: 100%;
+    width: 33px;
+    height: 33px;
+  }
+
+  :global(.swiper-button-next::after) {
+    font-size: 10px;
+    color: var(--white-200);
+  }
+
+  :global(.swiper-button-prev::after) {
+    font-size: 10px;
+    color: var(--white-200);
+  }
+}
+
+.sliderContainerSwap {
+  width: 100%;
+}
+
+.doubtsButton {
+  width: 100%;
+  max-width: 280px;
+  height: 50px;
+
+  border-radius: 50px;
+  margin: 0 30px;
+
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19.5px;
+
+  color: var(--white-100);
+  background: var(--blue-100);
+}
+
+@media (min-width: 768px) {
+
+  .doubtsTextContainer {
+    max-width: 100%;
+  }
+
+  .doubtsTitle {
+    font-size: 18px;
+  }
+
+  .doubtsParagraph {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .sliderFather {
+    width: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    :global(.swiper-slide) {
+      width: 100% !important;
+    }
+  }
+}
+
+@media (min-width: 968px) {
+  .sliderFather {
+    :global(.swiper-slide) {
+      width: 50% !important;
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  .accreditedDoubtsContainer {
+    gap: 25px;
+
+    margin: 86px 0;
+  }
+
+  .doubtsTextContainer {
+    max-width: 100%;
+  }
+
+  .doubtsTitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .doubtsParagraph {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .sliderFather {
+    width: 87%;
+
+    :global(.swiper-slide) {
+      width: 33.3% !important;
+    }
+  }
+
+  .sliderContainerSwap {
+    width: 100%;
+  }
+
+  .doubtsButton {
+    max-width: 295px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+
+    transition: .2s;
+  }
+}
+
+@media (min-width: 1568px) {
+  .accreditedDoubtsContainer {
+    :global(.swiper) {
+      width: 80% !important;
+    }
+  }
+}

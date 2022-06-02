@@ -1,0 +1,151 @@
+.accreditedBonusContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentContainer {
+  width: 100%;
+  max-width: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+
+  text-align: center;
+
+  color: var(--grey-100);
+}
+
+.itemsContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.itemContent {
+  width: 100%;
+  max-width: 250px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.image {
+  width: 100%;
+  max-width: 99px;
+}
+
+.textContainer {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.itemTitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+
+  color: var(--blue-200);
+}
+
+.paragraph {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+
+  text-align: center;
+
+  color: var(--grey-300)
+}
+
+.button {
+  width: 100%;
+  max-width: 280px;
+  height: 50px;
+
+  border-radius: 50px;
+  margin: 0 30px;
+
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 19.5px;
+
+  color: var(--white-100);
+  background: var(--blue-100);
+}
+
+@media (min-width: 1080px) {
+  .contentContainer {
+    max-width: 1390px;
+
+    gap: 40px;
+
+    margin: 0 30px;
+
+    button:hover {
+      background: var(--blue-900);
+    }
+  }
+
+  .title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .itemsContainer {
+    width: 100%;
+
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .itemContent {
+    max-width: 300px;
+  }
+
+  .image {
+    max-width: 102px;
+  }
+
+  .textContainer {
+    gap: 8px;
+  }
+
+  .itemTitle {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .button {
+    max-width: 295px;
+
+    font-size: 18px;
+    line-height: 27px;
+
+    transition: .2s;
+  }
+}

@@ -1,5 +1,5 @@
-import { IPlanLayoutProps } from "../../data";
-import styles from "./styles.module.scss";
+import { IPlanLayoutProps } from '../../data';
+import styles from './styles.module.scss';
 
 export const Plan = ({
   planTitle,
@@ -8,6 +8,7 @@ export const Plan = ({
   initialValue,
   handleTakePlanValue,
   finalValue,
+  index,
 }: IPlanLayoutProps) => {
   return (
     <div className={styles.planContainer}>
@@ -17,6 +18,8 @@ export const Plan = ({
             onChange={handleTakePlanValue}
             className={styles.planInput}
             type="checkbox"
+            name="myCheckbox"
+            id={index}
             value={finalValue}
           />
           <h1 className={styles.planTitle}>{planTitle}</h1>
