@@ -3,8 +3,7 @@ import { useAuth } from '../../hooks/AuthContext';
 import { useState } from 'react';
 
 export const Checkout = (props: any) => {
-  const { setNewStep, setPlanType, setPetName } = useAuth();
-  const [isSelected, setIsSelected] = useState<boolean>(false);
+  const { setNewStep, setPlanType, setPet, setPlanName } = useAuth();
   const [firstPlan, setFirstPlan] = useState<boolean>(false);
 
   function handleNextStep() {
@@ -12,22 +11,22 @@ export const Checkout = (props: any) => {
   }
 
   const handleTakePlanValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setIsSelected(false);
     setPlanType(event.target.value);
-    setIsSelected(!isSelected);
+    setPlanName(event.target.id);
   };
 
-  const handleTakePetName = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPetName(event.target.value);
+  const handleRegisterPets = (dataInformation: any) => {
+    setPet(dataInformation.planPatcher);
+
+    handleNextStep();
   };
 
   const layoutProps = {
     ...props,
     handleNextStep,
     handleTakePlanValue,
-    handleTakePetName,
-    isSelected,
     firstPlan,
+    handleRegisterPets,
   };
 
   return <Layout {...layoutProps} />;

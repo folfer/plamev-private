@@ -1,10 +1,11 @@
-import styles from "../Layout/styles.module.scss";
+import Link from 'next/link';
+import styles from '../Layout/styles.module.scss';
 
-import activeImg from "../../../../public/active.svg";
-import checkImg from "../../../../public/check.svg";
-import contractImg from "../../../../public/contract.svg";
+import activeImg from '../../../../public/active.svg';
+import checkImg from '../../../../public/check.svg';
+import contractImg from '../../../../public/contract.svg';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 export const Contraction = () => {
   return (
@@ -18,7 +19,9 @@ export const Contraction = () => {
               <Image src={contractImg} alt="plamev" />
             </span>
             <h2 className={styles.itemTitle}>Contratação online</h2>
-            <p className={styles.paragraph}>Contrate o plano em menos de 5 minutos!</p>
+            <p className={styles.paragraph}>
+              Contrate o plano em menos de 5 minutos!
+            </p>
           </div>
 
           <div className={styles.itemContent}>
@@ -26,7 +29,9 @@ export const Contraction = () => {
               <Image src={activeImg} alt="plamev" />
             </span>
             <h2 className={styles.itemTitle}>Ative o plano</h2>
-            <p className={styles.paragraph}>Cadastre a ID PET no aplicativo Plamev Appet</p>
+            <p className={styles.paragraph}>
+              Cadastre a ID PET no aplicativo Plamev Appet
+            </p>
           </div>
 
           <div className={styles.itemContent}>
@@ -34,10 +39,16 @@ export const Contraction = () => {
               <Image src={checkImg} alt="plamev" />
             </span>
             <h2 className={styles.itemTitle}>Tudo pronto</h2>
-            <p className={styles.paragraph}>Seu pet já faz parte da familia Plamev Pet</p>
+            <p className={styles.paragraph}>
+              Seu pet já faz parte da familia Plamev Pet
+            </p>
           </div>
         </div>
-        <button className={styles.button}>Contrate aqui em menos de 5 minutos!</button>
+        <Link href="/checkouts">
+          <button className={styles.button}>
+            Contrate aqui em menos de 5 minutos!
+          </button>
+        </Link>
       </section>
     </main>
   );

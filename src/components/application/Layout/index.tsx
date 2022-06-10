@@ -1,8 +1,9 @@
-import Image from "next/image";
-import styles from "../Layout/styles.module.scss";
+import Image from 'next/image';
+import styles from '../Layout/styles.module.scss';
 
-import phoneImg from "../../../../public/smartphone.png"
-import startImg from "../../../../public/start.svg"
+import phoneImg from '../../../../public/smartphone.png';
+import startImg from '../../../../public/start.svg';
+import Link from 'next/link';
 
 export const Application = () => {
   return (
@@ -24,11 +25,11 @@ export const Application = () => {
               <li>Saúde em dia e muito mais...</li>
             </ul>
           </div>
-
-          <button className={styles.button}>Contrate sem burocracia</button>
+          <Link href="/checkouts">
+            <button className={styles.button}>Contrate sem burocracia</button>
+          </Link>
         </div>
       </section>
-
 
       <div className={styles.imageContainer}>
         <div className={styles.phoneImg}>

@@ -4,12 +4,13 @@ export interface IPayment {
 
 export interface IPaymentLayout extends IPayment {
   planType: string;
-  petName: string;
+  pet: any;
   setDetailsModal(detailsModal: boolean): void;
   detailsModal: boolean;
+  planName: string;
 }
 
 export interface IAbstractLayoutProps
   extends Pick<
   IPaymentLayout,
-  | 'planType' | 'petName' | 'detailsModal' | 'setDetailsModal'> { }
+  | 'planType' | 'pet' | 'detailsModal' | 'setDetailsModal' | 'planName'> { }

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Navigation, A11y } from 'swiper';
+import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { DoubtsVideo } from './Components';
@@ -62,9 +63,11 @@ export const Doubts = () => {
         </SwiperSlide>
       </Swiper>
       <div className={styles.wrappedButton}>
-        <button className={styles.buttonProtectMyPet}>
-          Também quero proteger meu pet
-        </button>
+        <Link href="/checkouts">
+          <button className={styles.buttonProtectMyPet}>
+            Também quero proteger meu pet
+          </button>
+        </Link>
       </div>
     </div>
   );

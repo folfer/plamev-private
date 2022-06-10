@@ -343,6 +343,9 @@
   font-weight: 500;
   font-size: 12px;
   color: var(--grey-100);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   @media (min-width: 768px) {
     font-size: 9px;

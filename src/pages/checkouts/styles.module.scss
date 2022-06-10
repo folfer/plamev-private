@@ -109,15 +109,14 @@
 
   height: 100%;
 
+  margin-top: 50px;
+
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
   gap: 30px;
-
-  margin-top: 61px;
-  padding-top: 18px;
 }
 
 .chatButtonContainer {
@@ -125,10 +124,6 @@
 }
 
 @media (min-width: 768px) {
-  .wrappedContainers {
-    margin-top: 91px;
-    padding-top: 22px;
-  }
 
   .secondContainer {
     margin-bottom: 22px;

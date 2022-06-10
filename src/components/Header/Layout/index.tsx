@@ -30,14 +30,11 @@ export const Header = ({
       </div>
       <div>
         <nav className={styles.navBar}>
-          <div
-            className={
-              router.asPath === '/checkouts'
-                ? styles.navItemActive
-                : styles.navItem
-            }
-          >
-            <Link href="/checkouts">Nossos planos</Link>
+          <div className={styles.navItem}>
+            <Link href="/">Nossos planos</Link>
+          </div>
+          <div className={styles.navItem}>
+            <Link href="/">Rede credenciada</Link>
           </div>
           <div
             className={
@@ -46,10 +43,7 @@ export const Header = ({
                 : styles.navItem
             }
           >
-            <Link href="/beAccredited">Rede credenciada</Link>
-          </div>
-          <div className={styles.navItem}>
-            <Link href="/">Seja um credenciado</Link>
+            <Link href="/beAccredited">Seja um credenciado</Link>
           </div>
           <div className={styles.navItem}>
             <Link href="/">Quem somos</Link>

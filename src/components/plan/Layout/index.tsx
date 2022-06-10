@@ -1,13 +1,14 @@
-import Image from "next/image";
-import styles from "../Layout/styles.module.scss";
+import Image from 'next/image';
+import styles from '../Layout/styles.module.scss';
+import Link from 'next/link';
 
-import slimImg from "../../../../public/slim.svg";
-import advanceImg from "../../../../public/advance.svg";
-import platinumImg from "../../../../public/platinum.svg";
-import twoStarsImg from "../../../../public/two-stars.png";
-import threeStarsImg from "../../../../public/three-stars.png";
-import fiveStarsImg from "../../../../public/five-stars.png";
-import crownImg from "../../../../public/crown.svg";
+import slimImg from '../../../../public/slim.svg';
+import advanceImg from '../../../../public/advance.svg';
+import platinumImg from '../../../../public/platinum.svg';
+import twoStarsImg from '../../../../public/two-stars.png';
+import threeStarsImg from '../../../../public/three-stars.png';
+import fiveStarsImg from '../../../../public/five-stars.png';
+import crownImg from '../../../../public/crown.svg';
 
 export const Plan = () => {
   return (
@@ -48,9 +49,12 @@ export const Plan = () => {
               <a className={styles.link} type="button">
                 ver cobertura
               </a>
-              <button className={styles.button} type="button">
-                Contratar
-              </button>
+
+              <Link href="/checkouts">
+                <button className={styles.button} type="button">
+                  Contratar
+                </button>
+              </Link>
             </div>
             <div className={styles.assessment}>
               <Image src={twoStarsImg} alt="duas estrelas" />
@@ -88,9 +92,11 @@ export const Plan = () => {
               <a className={styles.link} type="button">
                 ver cobertura
               </a>
-              <button className={styles.button} type="button">
-                Contratar
-              </button>
+              <Link href="/checkouts">
+                <button className={styles.button} type="button">
+                  Contratar
+                </button>
+              </Link>
             </div>
             <div className={styles.assessment}>
               <Image src={threeStarsImg} alt="três estrelas" />
@@ -104,7 +110,7 @@ export const Plan = () => {
                   <Image src={platinumImg} alt="logo platinum" />
                 </div>
                 <div className={styles.imagesContainer}>
-                  <div >
+                  <div>
                     <Image src={fiveStarsImg} alt="cinco estrelas" />
                   </div>
                   <div>
@@ -138,9 +144,11 @@ export const Plan = () => {
               <a className={styles.link} type="button">
                 ver cobertura
               </a>
-              <button className={styles.button} type="button">
-                Contratar
-              </button>
+              <Link href="/checkouts">
+                <button className={styles.button} type="button">
+                  Contratar
+                </button>
+              </Link>
             </div>
           </section>
         </div>

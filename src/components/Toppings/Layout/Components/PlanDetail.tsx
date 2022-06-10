@@ -1,11 +1,12 @@
-import Image from "next/image";
-import { IPlanLayoutProps } from "../../data";
-import styles from "./styles.module.scss";
-import Logo from "../../../../../public/advance.png";
-import sellerImg from "../../../../../public/seller.svg";
-import { AiOutlineCheck } from "react-icons/ai";
-import { MdClose } from "react-icons/md";
-import { useEffect, useState } from "react";
+import Image from 'next/image';
+import { IPlanLayoutProps } from '../../data';
+import styles from './styles.module.scss';
+import Logo from '../../../../../public/advance.png';
+import sellerImg from '../../../../../public/seller.svg';
+import { AiOutlineCheck } from 'react-icons/ai';
+import { MdClose } from 'react-icons/md';
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export const PlanDetail = ({
   contract,
@@ -19,7 +20,7 @@ export const PlanDetail = ({
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const windowWidth = window.innerWidth;
       const MIN_WINDOW_WIDTH = 580;
       const MIN_WINDOW_WIDTH_TABLET = 780;
@@ -42,7 +43,7 @@ export const PlanDetail = ({
         <>
           <div className={styles.wrappedHeader}>
             <div className={styles.header}>
-              {planType === "Slim" ? (
+              {planType === 'Slim' ? (
                 <div className={styles.imageIconSlim}>
                   <Image
                     src={LogoProps}
@@ -64,8 +65,8 @@ export const PlanDetail = ({
               <h3 className={styles.headerText}>{planType}</h3>
               {mostSeller && (
                 <div className={styles.headerSellerImg}>
-                  {" "}
-                  <Image src={sellerImg} />{" "}
+                  {' '}
+                  <Image src={sellerImg} />{' '}
                 </div>
               )}
             </div>
@@ -74,7 +75,7 @@ export const PlanDetail = ({
           <div className={styles.prices}>
             <div className={styles.insisePrices}>
               <div className={styles.textPrice}>
-                de <p className={styles.textPriceOverline}>R${initialValue}</p>{" "}
+                de <p className={styles.textPriceOverline}>R${initialValue}</p>{' '}
                 por:
               </div>
             </div>
@@ -89,7 +90,7 @@ export const PlanDetail = ({
             </div>
           </div>
           <div className={styles.checkouts}>
-            {planType === "Slim" ? (
+            {planType === 'Slim' ? (
               <div className={styles.declined}>
                 <MdClose size={22} color="#ffffff" />
               </div>
@@ -100,7 +101,7 @@ export const PlanDetail = ({
             )}
           </div>
           <div className={styles.checkouts}>
-            {planType === "Slim" ? (
+            {planType === 'Slim' ? (
               <div className={styles.declined}>
                 <MdClose size={22} color="#ffffff" />
               </div>
@@ -111,11 +112,11 @@ export const PlanDetail = ({
             )}
           </div>
           <div className={styles.checkouts}>
-            {planType === "Slim" ? (
+            {planType === 'Slim' ? (
               <div className={styles.declined}>
                 <MdClose size={22} color="#ffffff" />
               </div>
-            ) : planType === "Advance" ? (
+            ) : planType === 'Advance' ? (
               <div className={styles.declined}>
                 <MdClose size={22} color="#ffffff" />
               </div>
@@ -145,7 +146,9 @@ export const PlanDetail = ({
             </>
           )}
           <div className={styles.wrappedButtonHire}>
-            <button className={styles.hireButton}>Contratar</button>
+            <Link href="/checkouts">
+              <button className={styles.hireButton}>Contratar</button>
+            </Link>
           </div>
         </>
       ) : (

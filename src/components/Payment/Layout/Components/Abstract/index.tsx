@@ -1,36 +1,46 @@
-import { BiDotsHorizontalRounded } from "react-icons/bi";
+import { BiDotsHorizontalRounded } from 'react-icons/bi';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
-import { TextField } from "@mui/material";
-import { IAbstractLayoutProps } from "../../../data";
+import { TextField } from '@mui/material';
+import { IAbstractLayoutProps } from '../../../data';
 
 export const Abstract = ({
-  petName,
+  pet,
   planType,
   setDetailsModal,
   detailsModal,
+  planName,
 }: IAbstractLayoutProps) => {
   return (
     <div className={styles.abstractContainer}>
       <div className={styles.contentContainer}>
         <div className={styles.headerAbstractContainer}>
           <h1 className={styles.title}>Resumo da sua compra:</h1>
-          <div className={styles.planContainer}>
-            <p className={styles.paragraph}>
-              O plano da <b>{petName ? petName : ""}</b> é o Slim no valor{" "}
-              <b>R${planType ? planType : "00,00"}</b>
-            </p>
-            <button
-              onClick={() => setDetailsModal(!detailsModal)}
-              className={styles.menuButton}
-            >
-              <BiDotsHorizontalRounded
-                size={26}
-                className={styles.menuButtonImg}
-              />
-            </button>
-          </div>
+          {pet.map((item, index) => (
+            <div className={styles.planContainer} key={index}>
+              <p className={styles.paragraph}>
+                O plano da <b>{item.petName ? item.petName : ''}</b> é o{' '}
+                {item.planNameType ? item.planNameType.split('/').pop() : ''} no
+                valor{' '}
+                <b>
+                  R$
+                  {item.planNameType
+                    ? item.planNameType.split('/')[0]
+                    : '00,00'}
+                </b>
+              </p>
+              <button
+                onClick={() => setDetailsModal(!detailsModal)}
+                className={styles.menuButton}
+              >
+                <BiDotsHorizontalRounded
+                  size={26}
+                  className={styles.menuButtonImg}
+                />
+              </button>
+            </div>
+          ))}
 
           {detailsModal && (
             <div className={styles.detailsInsideModal}>
@@ -48,7 +58,7 @@ export const Abstract = ({
           <div className={styles.discount}>
             <p className={styles.paragraphDiscount}>Subtotal</p>
             <p className={styles.paragraphDiscount}>
-              R${planType ? planType : "00,00"}
+              R${planType ? planType : '00,00'}
             </p>
           </div>
           <button className={styles.information}>
@@ -71,14 +81,14 @@ export const Abstract = ({
         <div className={styles.totalValueContainer}>
           <p className={styles.paragraphTotalValue}>Valor total</p>
           <p className={styles.paragraphTotalValue}>
-            R${planType ? planType : "00,00"}/mês
+            R${planType ? planType : '00,00'}/mês
           </p>
         </div>
 
         <div className={styles.termsContainer}>
           <input className={styles.checkbox} type="checkbox" />
           <p className={styles.paragraphTerms}>
-            Li e estou de acordo com o{" "}
+            Li e estou de acordo com o{' '}
             <a className={styles.linkTerms} href="">
               Contrato
             </a>

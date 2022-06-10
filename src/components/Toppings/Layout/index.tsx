@@ -1,17 +1,18 @@
-import { useEffect, useState } from "react";
-import { BsPlayFill } from "react-icons/bs";
-import styles from "../Layout/styles.module.scss";
-import { PlanDetail } from "./Components/PlanDetail";
-import Advance from "../../../../public/advance.png";
-import Slim from "../../../../public/slim.png";
-import Platinum from "../../../../public/platinum.png";
+import { useEffect, useState } from 'react';
+import { BsPlayFill } from 'react-icons/bs';
+import styles from '../Layout/styles.module.scss';
+import { PlanDetail } from './Components/PlanDetail';
+import Advance from '../../../../public/advance.png';
+import Slim from '../../../../public/slim.png';
+import Platinum from '../../../../public/platinum.png';
+import Link from 'next/link';
 
 export const Toppings = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const windowWidth = window.innerWidth;
       const MIN_WINDOW_WIDTH = 580;
       const MIN_WINDOW_WIDTH_TABLET = 780;
@@ -47,9 +48,11 @@ export const Toppings = () => {
                 hora de uma emergência.
               </h1>
             )}
-            <button type="button" className={styles.buttonWantProtect}>
-              Quero proteger meu pet
-            </button>
+            <Link href="/checkouts">
+              <button type="button" className={styles.buttonWantProtect}>
+                Quero proteger meu pet
+              </button>
+            </Link>
           </div>
           <div className={styles.wrappedSecondContainer}>
             <div className={styles.secondContainer}>

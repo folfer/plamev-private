@@ -16,7 +16,6 @@ function MyApp({ Component, pageProps }: any) {
 
   return (
     <AuthProvider>
-      <Header />
       <Component {...pageProps} />
     </AuthProvider>
   );

@@ -1,8 +1,9 @@
-import styles from "../Layout/styles.module.scss";
+import styles from '../Layout/styles.module.scss';
 
-import Image from "next/image";
+import Image from 'next/image';
 
-import cardImg from "../../../../public/card.png";
+import cardImg from '../../../../public/card.png';
+import Link from 'next/link';
 
 export const Information = () => {
   return (
@@ -32,7 +33,9 @@ export const Information = () => {
           </ul>
         </div>
 
-        <button className={styles.button}>Contrate sem burocracia</button>
+        <Link href="/checkouts">
+          <button className={styles.button}>Contrate sem burocracia</button>
+        </Link>
       </section>
     </main>
   );

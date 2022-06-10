@@ -6,21 +6,19 @@ export interface ICheckout {
   descriptionPlan?: string;
   bonusPlan?: string;
   handleTakePlanValue: any;
-  handleTakePetName: any;
   index: any;
 }
 
 export interface ICheckoutLayout extends ICheckout {
   handleNextStep(): void;
   handleTakePlanValue: any;
-  handleTakePetName: any;
-  isSelected: boolean;
+  handleRegisterPets(dataInformation: any): void;
 }
 
 export interface ICheckoutLayoutProps
   extends Pick<
   ICheckoutLayout,
-  | 'handleNextStep' | 'handleTakePlanValue' | 'handleTakePetName' | 'isSelected'> { }
+  | 'handleNextStep' | 'handleTakePlanValue' | 'handleRegisterPets'> { }
 
 export interface IPlanLayoutProps
   extends Pick<
