@@ -44,7 +44,7 @@ interface ProviderProps {
 
 const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 
-export const AuthProvider: React.FC = ({ children }: ProviderProps) => {
+export const AuthProvider: React.FC = ({ children }: any) => {
   const [newStep, setNewStep] = useState<number>(0);
   const [planType, setPlanType] = useState<string>('');
   const [planName, setPlanName] = useState<string>('');
