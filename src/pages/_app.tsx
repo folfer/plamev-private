@@ -6,7 +6,7 @@ import '../styles/global.scss';
 import { AuthProvider } from '../hooks/AuthContext';
 import { Header } from '../components/Header';
 
-function MyApp({ Component, pageProps }: any) {
+function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
       duration: 1000,
